@@ -1083,7 +1083,7 @@ if (!isset($_SESSION['active'])) {
 
     <!-- navbar start Open by clikcing on arrow, but keep it close for your mental health-->
     <nav>
-        <img id="logo" src="meta/Logo.svg" alt="logo" width="50px" height="50px">
+        <img id="logo" src="meta/logo.png" alt="logo" width="100px" height="100px">
         <links>
             <a href="homePage.php">Home</a>
             <a href="userInfo.php">Profile</a>
