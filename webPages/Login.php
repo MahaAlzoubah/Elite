@@ -730,7 +730,7 @@ if (isset($_POST['Sigin'])) {
 
 
         <div class="picture">
-            <img class="pic" src="Img/pi.jpg" alt="">
+            <img class="pic" src="img/pi.jpg" alt="">
         </div>
 
 

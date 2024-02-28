@@ -780,7 +780,7 @@ if (isset($_POST['Sigup'])) {
 
 
         <div class="picture">
-            <img class="pic" src="Img/p4.jpeg" alt="">
+            <img class="pic" src="img/p4.jpeg" alt="">
         </div>
 
 
