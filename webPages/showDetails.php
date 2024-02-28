@@ -573,7 +573,7 @@ else if ($_SESSION['type'] != "admin")
 
     <footer>
         <column> <!--column 1 width="20%"-->
-            <img class="logoFooter" src="meta/Logo.svg">
+            <img class="logoFooter" src="meta/logo.png" alt="logo" width="90px" height="90px">
             <p>The best collaboration application </p>
         </column>
         <column><!--column 2 width="20%"-->

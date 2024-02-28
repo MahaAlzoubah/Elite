@@ -56,6 +56,8 @@ if (isset($_POST['Sigup'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="SignUp.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
     <title>Hotel Booking</title>
     <style>
         html {
@@ -760,6 +762,19 @@ if (isset($_POST['Sigup'])) {
 
     <!---------------------------- Your Code is here ---------------------------->
 
+    <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Elite</h1>
+        <h2 class="fw-light">The right place for luxury room reservation</h2>
+        <p class=" text-body-secondary">Elite is a newly launched website for booking a luxurious hotel room, developed as Free and Open-Source Software. Our goal is to serve individuals who are looking for the ultimate in luxury travel experiences by offering a simple and easy-to-use booking platform. Our dedication is in our selection of exceptional hotels and resorts that provide guests with an unmatched degree of magnificence and luxury. Elite aims to be the preferred option for people looking for a classy and elegant stay, providing our wealthy guests with an easy and elegant reservation experience.</p>
+        <p>
+          <a href="improv.html" class=" git-color btn btn-primary my-2">Improvment</a>
+          <a href="discover.html" class="  git-color btn btn-secondary my-2">Discover</a>
+        </p>
+      </div>
+    </div>
+  </section>
 
     <div class="mainrow">
 
@@ -819,7 +834,7 @@ if (isset($_POST['Sigup'])) {
     <footer>
         <column>
             <!--column 1 width="20%"-->
-            <img class="logoFooter" src="meta/Logo.svg">
+            <img class="logoFooter" src="meta/logo.png" alt="logo" width="90px" height="90px">
             <p>The best collaboration application </p>
         </column>
         <column>
@@ -870,5 +885,6 @@ if (isset($_POST['Sigup'])) {
     </script>
 
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </html>
