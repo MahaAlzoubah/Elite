@@ -45,6 +45,9 @@
             background-color: lightgray;
         }
 
+        section {
+            margin-top: 20px;
+        }
 
         /* nav style start here */
         nav {
@@ -112,6 +115,14 @@
             text-align: center;
             color: #FFFFFF;
             padding: 0px 200px;
+        }
+        .p11{
+          font-family: 'Times New Roman', Times, serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 24px;
+          text-align: center;
+          color: #FFFFFF;
         }
 
         /* big center title */
@@ -336,7 +347,7 @@
             text-align: center;
             color: #000000;
         }
-    
+
         .orange2 {
             width: 262px;
             height: 59px;
@@ -354,7 +365,225 @@
         }
 
 
-     
+
+                section {
+                    margin-top: 20px;
+                }
+
+                   /* nav style start here */
+           nav {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 20px;
+                    width: auto;
+                    height: 90px;
+                    background-color: #15133C;
+                    align-items: center;
+
+                }
+
+                nav img {
+                    width: 5%;
+
+                }
+
+                links {
+                    margin-right: auto;
+                    margin-left: 20px;
+                    display: flex;
+                    width: 50%;
+                    justify-content: left;
+                    align-items: center;
+                }
+
+                links a {
+                    text-decoration: none;
+                    color: white;
+                    margin-left: 40px;
+                    font-size: 13px;
+                    line-height: 150%;
+                }
+
+                /* nav style ends here */
+
+
+            /* nav style ends here */
+
+            /* footer style start here */
+             /* footer style start here */
+             footer {
+                    padding: 30px;
+                    width: auto;
+                    height: 200px;
+                    background: #15133C;
+                    color: white;
+                }
+
+            /* mian section  */
+
+            /* container2 */
+            .container2 {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin-top: 150px;
+                padding: 30px;
+                padding: 0px 60px;
+                margin-bottom: 100px;
+
+            }
+
+            /* container2 right image*/
+            .container2-img {
+                width: 100%;
+                height: auto;
+            }
+
+            /* container2 left text(title, para,...etc)*/
+            .container2-text {
+                display: flex;
+                flex-direction: column;
+                width: 45%;
+            }
+
+            .imgRightBox {
+                width: 40%;
+            }
+
+            .container2-P1 {
+                font-family: 'Times New Roman', Times, serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 50px;
+                line-height: 100%;
+                padding-left: 20px;
+                padding-top: 20px;
+            }
+
+
+
+            .container2-P2 {
+                font-family: 'Times New Roman', Times, serif;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 150%;
+                margin: 30px 0px;
+                letter-spacing: 0.255em;
+
+                color: #73777B;
+            }
+
+
+
+            .container2-P3 p {
+                width: 302.71px;
+                height: 147.48px;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 168%;
+                color: #000000;
+            }
+
+            /* container2 left button*/
+            .container2-a {
+                width: 166px;
+                height: 45px;
+                left: 164px;
+                top: 1503px;
+                background: #15133C;
+                border-radius: 7px;
+                margin-top: 30px;
+                color: white;
+
+            }
+
+            .container2-a a {
+                text-decoration: none;
+                font-size: 13px;
+                color: #FFFFFF;
+            }
+
+            /* we reach here */
+
+            /* footer style ends here */
+            /* mian section  */
+
+            /* container2 */
+            .container2 {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin-top: 150px;
+                padding: 30px;
+                padding: 0px 60px;
+                margin-bottom: 100px;
+
+            }
+
+            /* container2 right image*/
+            .container2-img {
+                width: 100%;
+                height: auto;
+            }
+
+            /* container2 left text(title, para,...etc)*/
+            .container2-text {
+                display: flex;
+                flex-direction: column;
+                width: 45%;
+            }
+
+            .imgRightBox {
+                width: 40%;
+            }
+
+
+            .container2-P2 {
+                font-family: 'Times New Roman', Times, serif;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 150%;
+                margin: 30px 0px;
+                letter-spacing: 0.255em;
+
+                color: #73777B;
+            }
+
+
+
+            .container2-P3 p {
+                width: 302.71px;
+                height: 147.48px;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 168%;
+                color: #000000;
+            }
+
+            /* container2 left button*/
+            .container2-a {
+                width: 166px;
+                height: 45px;
+                left: 164px;
+                top: 1503px;
+                background: #15133C;
+                border-radius: 7px;
+                margin-top: 30px;
+                color: white;
+
+            }
+
+            .container2-a a {
+                text-decoration: none;
+                font-size: 13px;
+                color: #FFFFFF;
+            }
         /* main section style ends here */
 
         /* footer style start here */
@@ -366,7 +595,7 @@
             color: white;
         }
 
-       
+
     </style>
     <!-- Don't open this until we write PHP I alert you, you will scroll for rest of your life this is css code for page -->
 </head>
@@ -375,53 +604,83 @@
 
     <!-- navbar start Open by clikcing on arrow, but keep it close for your mental health-->
     <nav>
-        <img id="logo" src="meta/logo.png" alt="logo" width="100px" height="100px">
-        <links>
-            <a href="homePage.php">Home</a>
-            <a class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-               About Us
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="whatelite.html">What is Elite?</a></li>
-              <li><a class="dropdown-item" href="priv.html">Privcy & Policy</a></li>
-              <li><a class="dropdown-item" href="lic.html">License</a></li>
-              <li><a class="dropdown-item" href="chang.html">Change Log</a></li>
-              <li><a class="dropdown-item" href="screen.html">Screenshots</a></li>
-              </ul>
-           </div>
-           <div class="dropdown">
-            <a class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-               Improvment
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="de-fet-req.html">Features & Requirements</a></li>
-              <li><a class="dropdown-item" href="de-code.html">Code of conduct</a></li>
-              <li><a class="dropdown-item" href="de-doc.html">Developer documentation</a></li>
-              <li><a class="dropdown-item" href="de-guid.html">Developer guidlines</a></li>
-              <li><a class="dropdown-item" href="https://discord.gg/3BpZhYgY">Message forum </a></li>
-              <li><a class="dropdown-item" href="user-feed.php">Feedback</a></li>
-              <li><a class="dropdown-item" href="https://github.com/MahaAlzoubah/Elite/issues">Issue reporting</a></li>
+     <img id="logo" src="meta/logo.png" alt="logo" width="100px" height="100px">
+     <links>
+         <a href="homePage.php">Home</a>
+         <a class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            About Us
+         </a>
+         <ul class="dropdown-menu">
+           <li><a class="dropdown-item" href="whatelite.php">What is Elite?</a></li>
+           <li><a class="dropdown-item" href="priv.php">Privcy & Policy</a></li>
+           <li><a class="dropdown-item" href="lic.php">License</a></li>
+           <li><a class="dropdown-item" href="chang.php">Change Log</a></li>
+           <li><a class="dropdown-item" href="screen.php">Screenshots</a></li>
+           </ul>
+        </div>
+        <div class="dropdown">
+         <a class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Improvment
+         </a>
+         <ul class="dropdown-menu">
+           <li><a class="dropdown-item" href="de-fet-req.php">Features & Requirements</a></li>
+           <li><a class="dropdown-item" href="de-code.php">Code of conduct</a></li>
+           <li><a class="dropdown-item" href="de-doc.php">Developer documentation</a></li>
+           <li><a class="dropdown-item" href="de-guid.php">Developer guidlines</a></li>
+           <li><a class="dropdown-item" href="https://discord.gg/3BpZhYgY">Message forum </a></li>
+           <li><a class="dropdown-item" href="user-feed.php">Feedback</a></li>
+           <li><a class="dropdown-item" href="https://github.com/MahaAlzoubah/Elite">Github repository</a></li>
+           <li><a class="dropdown-item" href="https://github.com/MahaAlzoubah/Elite/issues">Issue reporting</a></li>
 
-              </ul>
-           </div>
+           </ul>
+        </div>
 
-           <div class="dropdown">
-            <a class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-               Discover
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="discover.html">Why Us?</a></li>
-              <li><a class="dropdown-item" href="user-annouc.html">Annoucment</a></li>
-              <li><a class="dropdown-item" href="user-feed.php">Feedback</a></li>
-              <li><a class="dropdown-item" href="https://github.com/MahaAlzoubah/Elite/issues">Issue reporting</a></li>
+        <div class="dropdown">
+         <a class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Discover
+         </a>
+         <ul class="dropdown-menu">
+           <li><a class="dropdown-item" href="discover.php">Why Us?</a></li>
+           <li><a class="dropdown-item" href="user-annouc.php">Annoucment</a></li>
+           <li><a class="dropdown-item" href="user-feed.php">Feedback</a></li>
+           <li><a class="dropdown-item" href="https://github.com/MahaAlzoubah/Elite/issues">Issue reporting</a></li>
 
-              </ul>
-           </div>
+           </ul>
+        </div>
 
-        </links>
-  
-    </nav>
-   
+        <button style=" margin-left: 30px; color:white; background-color: transparent; border:none" onclick="window.location.href='download.php?file=Elite.zip';">Download</button>
+
+
+      <?php
+      if (!empty($_GET['file']))
+      {
+      $filename=basename($_GET['file']);
+      $filepath= './'. $filename;
+      if(!empty($filename) && file_exists($filepath)){
+
+        //define headers
+        header("cache-control: public");
+        header("content-description: File Transfer");
+        header("Content-Disposition: attachment; filename=$filename");
+        header('Content-Type: application/octet-stream');
+        header('Content-Length: ' . filesize($filepath));
+        header("Content-Transfer-Encoding: binary");
+
+        ob_clean(); // Clean (erase) the output buffer
+        flush();    // Flush system output buffer
+        readfile($filepath);
+        exit;
+
+      }
+      else{
+        echo "This File Does not exist.";
+      }
+      }
+      ?>
+     </links>
+
+ </nav>
+
     <!-- navbar end -->
 
     <!---------------------------- Your Code is here ---------------------------->
@@ -430,40 +689,12 @@
         <!--start container1-->
         <div class="container1">
             <!--center title-->
-            <p class="p2">Elite</p>
+            <p class="p2" style="color:orange;">Elite</p>
 
             <!--big center title-->
             <p class="p1">Elite is a newly launched website for booking a luxurious hotel room, developed as Free and Open-Source Software. Our goal is to serve individuals who are looking for the ultimate in luxury travel experiences by offering a simple and easy-to-use booking platform. Our dedication is in our selection of exceptional hotels and resorts that provide guests with an unmatched degree of magnificence and luxury. Elite aims to be the preferred option for people looking for a classy and elegant stay, providing our wealthy guests with an easy and elegant reservation experience.</p></p>
-            <button class="orangelB" onclick="window.location.href='download.php?file=Elite.zip';">Download</button>
-
-
-<?php
-    if (!empty($_GET['file']))
-    {
-        $filename=basename($_GET['file']);
-        $filepath= './'. $filename;
-        if(!empty($filename) && file_exists($filepath)){
-
-            //define headers 
-            header("cache-control: public");
-            header("content-description: File Transfer");
-            header("Content-Disposition: attachment; filename=$filename"); 
-            header('Content-Type: application/octet-stream');
-            header('Content-Length: ' . filesize($filepath));
-            header("Content-Transfer-Encoding: binary");  
-
-            ob_clean(); // Clean (erase) the output buffer
-            flush();    // Flush system output buffer
-            readfile($filepath);
-            exit; 
-
-        }
-        else{
-            echo "This File Does not exist.";
-        }
-    }
-?>
             <!--center button-->
+            <p class="p1">To know more about us see <span style="color: orange;" class="p11">About us</span> </p>
 
             <!--start center box-->
             <div class="centerBox">
@@ -472,20 +703,18 @@
                     <!--divided the white part into 3 div-->
                     <!--left part-->
                     <div class="leftWhiteBox-divs RI">
-                        <p class="one">CUSTOMES</p>
-                        <p class="two">+300</p>
-                        <p class="three">Happy Customers</p>
+                        <p class="one">release</p>
+                        <p class="two">+5</p>
                     </div>
                     <!--center part-->
                     <div class="leftWhiteBox-divs CE">
-                        <p class="one">ROOMS</p>
-                        <p class="two">+2500</p>
-                        <p class="three">Room Avalilable</p>
+                        <p class="one">Contributers</p>
+                        <p class="two">+200</p>
                     </div>
                     <!--right part-->
                     <div class="leftWhiteBox-divs LE">
                         <div>
-                            <p class="one">RATES</p>
+                            <p class="one">User's rates</p>
                         </div>
                         <div class="rate">
                             <p style='font-size:45px' class="rate-number">4.6</p>
@@ -539,10 +768,59 @@
 
         <!-------------------------- code of PHP starts here -------------------->
         <div class="container3">
-            <div class="top">
-                <p class="p3">Luxuirous</p>
-                <p class="p4">Best Rooms</p>
-            </div>
+          <section>
+              <p class="container2-P1">Important Announcement !</p>
+
+              <div class="container2">
+
+                  <!-- Announcement Card 1 -->
+                  <div class="card mb-3" style="max-width: 540px; margin-right:30px">
+                      <div class="row g-0">
+                          <div class="col-md-4">
+                              <img src="./img/ann.jpeg" alt="Announcement Image 1" class="img-fluid rounded-start">
+                          </div>
+                          <div class="col-md-8">
+                              <div class="card-body">
+                                  <h5 class="card-title" style="color:red;">Important Announcement!</h5>
+                                  <p class="card-text">Date: January 1, 2024</p>
+                                  <p class="card-text">Elite's official Discussions board is now live! 🌐 Join us to:
+
+                                      Share your ideas 💡
+                                      Report bugs 🐛
+                                      Discuss features 🚀
+                                      Connect with the Elite community 💬
+                                      Let's build Elite together! Dive in and start chatting.
+
+                                      Happy discussing! 🌍✨
+
+                                      The Elite Team</p>
+                                  <a href="https://github.com/MahaAlzoubah/Elite/discussions/categories/announcements" class="btn btn-primary">Learn More</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <!-- Announcement Card 2 -->
+                  <div class="card mb-3" style="max-width: 540px;">
+                      <div class="row g-0">
+                          <div class="col-md-4">
+                              <img src="./img/ann.jpeg" alt="Announcement Image 2" class="img-fluid rounded-start">
+                          </div>
+                          <div class="col-md-8">
+                              <div class="card-body">
+                                <h5 class="card-title" style="color:red;">Important Announcement!</h5>
+                                  <p class="card-text">Date: February 1, 2024</p>
+                                  <p class="card-text">Learn about the community contributions that make Elite better.</p>
+                                  <a href="https://github.com/MahaAlzoubah/Elite/discussions/categories/announcements" class="btn btn-primary">Learn More</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <!-- Add more announcement cards as needed -->
+
+              </div>
+          </section>
 
         </div>
 

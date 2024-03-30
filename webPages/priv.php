@@ -270,11 +270,11 @@
            About Us
         </a>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="whatelite.html">What is Elite?</a></li>
-          <li><a class="dropdown-item" href="priv.html">Privcy & Policy</a></li>
-          <li><a class="dropdown-item" href="lic.html">License</a></li>
-          <li><a class="dropdown-item" href="chang.html">Change Log</a></li>
-          <li><a class="dropdown-item" href="screen.html">Screenshots</a></li>
+          <li><a class="dropdown-item" href="whatelite.php">What is Elite?</a></li>
+          <li><a class="dropdown-item" href="priv.php">Privcy & Policy</a></li>
+          <li><a class="dropdown-item" href="lic.php">License</a></li>
+          <li><a class="dropdown-item" href="chang.php">Change Log</a></li>
+          <li><a class="dropdown-item" href="screen.php">Screenshots</a></li>
           </ul>
        </div>
        <div class="dropdown">
@@ -282,12 +282,13 @@
            Improvment
         </a>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="de-fet-req.html">Features & Requirements</a></li>
-          <li><a class="dropdown-item" href="de-code.html">Code of conduct</a></li>
-          <li><a class="dropdown-item" href="de-doc.html">Developer documentation</a></li>
-          <li><a class="dropdown-item" href="de-guid.html">Developer guidlines</a></li>
+          <li><a class="dropdown-item" href="de-fet-req.php">Features & Requirements</a></li>
+          <li><a class="dropdown-item" href="de-code.php">Code of conduct</a></li>
+          <li><a class="dropdown-item" href="de-doc.php">Developer documentation</a></li>
+          <li><a class="dropdown-item" href="de-guid.php">Developer guidlines</a></li>
           <li><a class="dropdown-item" href="https://discord.gg/3BpZhYgY">Message forum </a></li>
           <li><a class="dropdown-item" href="user-feed.php">Feedback</a></li>
+          <li><a class="dropdown-item" href="https://github.com/MahaAlzoubah/Elite">Github repository</a></li>
           <li><a class="dropdown-item" href="https://github.com/MahaAlzoubah/Elite/issues">Issue reporting</a></li>
 
           </ul>
@@ -298,15 +299,45 @@
            Discover
         </a>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="discover.html">Why Us?</a></li>
-          <li><a class="dropdown-item" href="user-annouc.html">Annoucment</a></li>
+          <li><a class="dropdown-item" href="discover.php">Why Us?</a></li>
+          <li><a class="dropdown-item" href="user-annouc.php">Annoucment</a></li>
           <li><a class="dropdown-item" href="user-feed.php">Feedback</a></li>
           <li><a class="dropdown-item" href="https://github.com/MahaAlzoubah/Elite/issues">Issue reporting</a></li>
 
           </ul>
        </div>
 
+       <button style=" margin-left: 30px; color:white; background-color: transparent; border:none" onclick="window.location.href='download.php?file=Elite.zip';">Download</button>
+
+
+     <?php
+     if (!empty($_GET['file']))
+     {
+     $filename=basename($_GET['file']);
+     $filepath= './'. $filename;
+     if(!empty($filename) && file_exists($filepath)){
+
+       //define headers
+       header("cache-control: public");
+       header("content-description: File Transfer");
+       header("Content-Disposition: attachment; filename=$filename");
+       header('Content-Type: application/octet-stream');
+       header('Content-Length: ' . filesize($filepath));
+       header("Content-Transfer-Encoding: binary");
+
+       ob_clean(); // Clean (erase) the output buffer
+       flush();    // Flush system output buffer
+       readfile($filepath);
+       exit;
+
+     }
+     else{
+       echo "This File Does not exist.";
+     }
+     }
+     ?>
     </links>
+
 </nav>
 
 <!-- navbar end -->
@@ -318,36 +349,64 @@
 
             <!--left text(title, para,...etc)-->
             <div class="container2-text">
-                <p class="container2-P1">License</p>
+                <p class="container2-P1">Privacy & Policy</p>
 
-                <p class="container2-P2">MIT License</p>
+                <p class="container2-P2">Welcome</p>
+
+
+                <p class="container2-P3">
+                    Welcome to Elite, where we prioritize transparency and the protection of your privacy. While we've outlined the key points in this summary, please note that the comprehensive and legally-binding version of our privacy policy is available below. Residents of Bahrain can find specific details tailored to Bahrain legislation on our Bahrain Privacy Rights page.
+                </p>
 
                 <p class="container2-P3">
 
-                   <span style="font-weight: bold;">Copyright (c) 2024 Elite</span><br/>
-                   Permission is hereby granted, free of charge, to any person obtaining a copy
-                   of this software and associated documentation files (the "Software"), to deal
-                   in the Software without restriction, including without limitation the rights
-                   to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-                   copies of the Software, and to permit persons to whom the Software is
-                   furnished to do so, subject to the following conditions:
+                   <span style="font-weight: bold;">Purpose and Commitment:</span><br/>
+
+                    At Elite, our commitment revolves around the responsible use of technology to elevate user experiences while safeguarding privacy. We adhere strictly to collecting, utilizing, and disclosing personally identifiable information solely for legitimate purposes.                </p>
 
                 <p class="container2-P3">
-                    The above copyright notice and this permission notice shall be included in all
-                    copies or substantial portions of the Software.               </p>
+                    <span style="font-weight: bold;"> Non-Selling Policy: </span> <br/>
+
+                    Elite upholds a firm stance against selling any personally identifiable information to third parties, in accordance with widely accepted definitions of the term.                </p>
 
                 <p class="container2-P3">
+                    <span style="font-weight: bold;">Definition of Personally Identifiable Information:</span><br/>
 
-                    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.             
-                 </p>
-                
-            </div> 
-            <!--right image-->
-            <div class="imgRightBox">
-                <img src="img/container2.png" alt="" class="container2-img"> 
+                    In the context of this policy, "personally identifiable information" encompasses any data that can identify or reasonably be linked to a named human subject.                </p>
+
+                <p class="container2-P3">
+                    <span style="font-weight: bold;">Data Collection Methods:</span> <br/>
+
+                    Elite employs three primary methods to gather relevant information about you, ensuring a transparent and secure approach to data collection.                </p>
+
+                <p class="container2-P3">
+                    <span style="font-weight: bold;">Disclaimer: </span><br/>
+
+                    Before delving into the highlights, it's essential to acknowledge that these summaries are provided for clarity and understanding. For the comprehensive and legally-binding version of our privacy statement, please refer to the complete document accessible through the link below.                </p>
+
+                <p class="container2-P3">
+                   <span style="font-weight: bold;"> Bahrain Privacy Rights:</span> <br/>
+
+                    Residents of Bahrain can delve into specific details aligned with Bahrain legislation on our dedicated Bahrain Privacy Rights page. Legal definitions are provided for your reference.
+
+                </p>
+                <p class="container2-P3">
+                   <span style="font-weight: bold;">  Contact Us: </span><br/>
+
+                    For any questions, concerns, or the need for further clarification, feel free to reach out to our privacy team at <a href="mailto:privacy@elite.com">privacy@elite.com</a>. <br/> <br/>
+
+                    Thank you for choosing Elite, where your privacy matters.
+                </p>
+
 
             </div>
-            
+            <!--right image-->
+            <div class="imgRightBox">
+                <img src="img/container2.png" alt="" class="container2-img"> <br/> <br/> <br/> <br/> <br/> <br/>
+                <img src="img/container2.png" alt="" class="container2-img">
+
+            </div>
+
         </div>
         <!--end container2-->
 

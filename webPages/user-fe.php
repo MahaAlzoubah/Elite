@@ -270,11 +270,11 @@
            About Us
         </a>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="whatelite.html">What is Elite?</a></li>
-          <li><a class="dropdown-item" href="priv.html">Privcy & Policy</a></li>
-          <li><a class="dropdown-item" href="lic.html">License</a></li>
-          <li><a class="dropdown-item" href="chang.html">Change Log</a></li>
-          <li><a class="dropdown-item" href="screen.html">Screenshots</a></li>
+          <li><a class="dropdown-item" href="whatelite.php">What is Elite?</a></li>
+          <li><a class="dropdown-item" href="priv.php">Privcy & Policy</a></li>
+          <li><a class="dropdown-item" href="lic.php">License</a></li>
+          <li><a class="dropdown-item" href="chang.php">Change Log</a></li>
+          <li><a class="dropdown-item" href="screen.php">Screenshots</a></li>
           </ul>
        </div>
        <div class="dropdown">
@@ -282,12 +282,13 @@
            Improvment
         </a>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="de-fet-req.html">Features & Requirements</a></li>
-          <li><a class="dropdown-item" href="de-code.html">Code of conduct</a></li>
-          <li><a class="dropdown-item" href="de-doc.html">Developer documentation</a></li>
-          <li><a class="dropdown-item" href="de-guid.html">Developer guidlines</a></li>
+          <li><a class="dropdown-item" href="de-fet-req.php">Features & Requirements</a></li>
+          <li><a class="dropdown-item" href="de-code.php">Code of conduct</a></li>
+          <li><a class="dropdown-item" href="de-doc.php">Developer documentation</a></li>
+          <li><a class="dropdown-item" href="de-guid.php">Developer guidlines</a></li>
           <li><a class="dropdown-item" href="https://discord.gg/3BpZhYgY">Message forum </a></li>
           <li><a class="dropdown-item" href="user-feed.php">Feedback</a></li>
+          <li><a class="dropdown-item" href="https://github.com/MahaAlzoubah/Elite">Github repository</a></li>
           <li><a class="dropdown-item" href="https://github.com/MahaAlzoubah/Elite/issues">Issue reporting</a></li>
 
           </ul>
@@ -298,19 +299,49 @@
            Discover
         </a>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="discover.html">Why Us?</a></li>
-          <li><a class="dropdown-item" href="user-annouc.html">Annoucment</a></li>
+          <li><a class="dropdown-item" href="discover.php">Why Us?</a></li>
+          <li><a class="dropdown-item" href="user-annouc.php">Annoucment</a></li>
           <li><a class="dropdown-item" href="user-feed.php">Feedback</a></li>
           <li><a class="dropdown-item" href="https://github.com/MahaAlzoubah/Elite/issues">Issue reporting</a></li>
 
           </ul>
        </div>
 
+       <button style=" margin-left: 30px; color:white; background-color: transparent; border:none" onclick="window.location.href='download.php?file=Elite.zip';">Download</button>
+
+
+     <?php
+     if (!empty($_GET['file']))
+     {
+     $filename=basename($_GET['file']);
+     $filepath= './'. $filename;
+     if(!empty($filename) && file_exists($filepath)){
+
+       //define headers
+       header("cache-control: public");
+       header("content-description: File Transfer");
+       header("Content-Disposition: attachment; filename=$filename");
+       header('Content-Type: application/octet-stream');
+       header('Content-Length: ' . filesize($filepath));
+       header("Content-Transfer-Encoding: binary");
+
+       ob_clean(); // Clean (erase) the output buffer
+       flush();    // Flush system output buffer
+       readfile($filepath);
+       exit;
+
+     }
+     else{
+       echo "This File Does not exist.";
+     }
+     }
+     ?>
     </links>
 
 </nav>
 
 <!-- navbar end -->
+    <!-- navbar end -->
 
     <!---------------------------- main start here ---------------------------->
     <main>
@@ -319,64 +350,42 @@
 
             <!--left text(title, para,...etc)-->
             <div class="container2-text">
-                <p class="container2-P1">Privacy & Policy</p>
+                <p class="container2-P1">Features and Requirements</p>
 
-                <p class="container2-P2">Welcome</p>
+                <p class="container2-P2">Features</p>
 
 
                 <p class="container2-P3">
-                    Welcome to Elite, where we prioritize transparency and the protection of your privacy. While we've outlined the key points in this summary, please note that the comprehensive and legally-binding version of our privacy policy is available below. Residents of Bahrain can find specific details tailored to Bahrain legislation on our Bahrain Privacy Rights page.
+                    <ol>
+                        <li>User-Friendly Booking Platform: - Provide a user-friendly interface that makes booking simple and easy to navigate.</li>
+                        <li>Selection of Exquisite Hotels and Resorts: Offer a carefully selected range of upscale residences that are known for their opulence and grandeur. </li>
+                        <li>Elegant and Stylish Booking Procedure: - Make sure each stage of the booking procedure exudes elegance and sophistication.</li>
+                        <li>Personalized Guest Experience: - Customize offers and suggestions to each visitor's particular tastes and needs.</li>
+                        <li>Transparent Pricing and Policies: - Give customers access to precise pricing details as well as explicit guidelines about bookings, refunds, and extra services.</li>
+                        <li>Secure and Reliable Booking Platform: - Adhere to industry standards for data protection and implement strong encryption mechanisms.</li>
+                        <li>available Customer Support: - Provide easily available methods for guests to voice questions, grievances, and special requests in a timely manner.</li>
+                    </ol>
                 </p>
 
-                <p class="container2-P3">
+                <p class="container2-P2">Requirements</p>
 
-                   <span style="font-weight: bold;">Purpose and Commitment:</span><br/>
-
-                    At Elite, our commitment revolves around the responsible use of technology to elevate user experiences while safeguarding privacy. We adhere strictly to collecting, utilizing, and disclosing personally identifiable information solely for legitimate purposes.                </p>
 
                 <p class="container2-P3">
-                    <span style="font-weight: bold;"> Non-Selling Policy: </span> <br/>
-
-                    Elite upholds a firm stance against selling any personally identifiable information to third parties, in accordance with widely accepted definitions of the term.                </p>
-
-                <p class="container2-P3">
-                    <span style="font-weight: bold;">Definition of Personally Identifiable Information:</span><br/>
-
-                    In the context of this policy, "personally identifiable information" encompasses any data that can identify or reasonably be linked to a named human subject.                </p>
-
-                <p class="container2-P3">
-                    <span style="font-weight: bold;">Data Collection Methods:</span> <br/> 
-
-                    Elite employs three primary methods to gather relevant information about you, ensuring a transparent and secure approach to data collection.                </p>
-
-                <p class="container2-P3">
-                    <span style="font-weight: bold;">Disclaimer: </span><br/>
-
-                    Before delving into the highlights, it's essential to acknowledge that these summaries are provided for clarity and understanding. For the comprehensive and legally-binding version of our privacy statement, please refer to the complete document accessible through the link below.                </p>
-                
-                <p class="container2-P3">
-                   <span style="font-weight: bold;"> Bahrain Privacy Rights:</span> <br/>
-
-                    Residents of Bahrain can delve into specific details aligned with Bahrain legislation on our dedicated Bahrain Privacy Rights page. Legal definitions are provided for your reference.
-                
+                    <ol>
+                        <li>XAMPP Installation Required: Install XAMPP to set up the necessary server environment for hosting the web application. <a href="https://www.apachefriends.org/download.html">Download from here</a></li><br/>
+                        <li>Choice of Text Editor: You may choose any preferred text editor for coding and development purposes. (For instance, Visual Studio Code is recommended.)<a href="https://code.visualstudio.com/download">Download from here</a></li><br/>
+                        <li>	Bootstrap v5.3 Integration Necessary: Bootstrap v5.3 must be integrated into the project as the CSS Framework to ensure consistent styling and layout across the website. <a href="https://getbootstrap.com/">Discover</a> </li><br/>
+                    </ol>
                 </p>
-                <p class="container2-P3">
-                   <span style="font-weight: bold;">  Contact Us: </span><br/>
-
-                    For any questions, concerns, or the need for further clarification, feel free to reach out to our privacy team at <a href="mailto:privacy@elite.com">privacy@elite.com</a>. <br/> <br/>
-                    
-                    Thank you for choosing Elite, where your privacy matters.
-                </p>    
-    
-                
-            </div> 
+                <!-- <button class="container2-a">Discover all Rooms</button> -->
+            </div>
             <!--right image-->
             <div class="imgRightBox">
-                <img src="img/container2.png" alt="" class="container2-img"> <br/> <br/> <br/> <br/> <br/> <br/>
+                <img src="img/container2.png" alt="" class="container2-img">
                 <img src="img/container2.png" alt="" class="container2-img">
 
             </div>
-            
+
         </div>
         <!--end container2-->
 
@@ -393,8 +402,6 @@
 
     </footer>
     <!-- ends of footer -->
-
-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 

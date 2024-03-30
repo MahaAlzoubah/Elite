@@ -256,7 +256,6 @@
 
     /* footer style ends here */
 </style>
-
 <!-- Don't open this until we write PHP I alert you, you will scroll for rest of your life this is css code for page -->
 </head>
 
@@ -339,8 +338,7 @@
     </links>
 
 </nav>
-    <!-- navbar end -->
-
+<!-- navbar end -->
     <!---------------------------- main start here ---------------------------->
     <main>
         <!--start container2-->
@@ -348,49 +346,112 @@
 
             <!--left text(title, para,...etc)-->
             <div class="container2-text">
-                <p class="container2-P1">Feedback </p>
-
-                <p class="container2-P2">Please share your comments and suggestions</p>
-
-
+                <p class="container2-P1">Developer Guidelines</p>
                 <p class="container2-P3">
-                    <form action="user-feed.php" method="post">
-                        <label for="name">Name:</label><br/>
-                        <input type="text" id="name" name="name" placeholder="Your name..."><br/>
-                        <label for="email">Email:</label><br/>
-                        <input type="email" id="email" name="email" placeholder="Your email..."><br/>
-                        <label for="comment">Comment:</label><br/>
-                        <textarea name="comment" id="comment" cols="50" rows="5" placeholder="Write your comment here..."></textarea><br/>
-                        <input type="submit" value="Submit">
+                   <br/><br/> Welcome to the community supporting Elite development! The purpose of these guidelines is to facilitate your effective participation in the project. Before you begin working on Elite, please review these a bit.
+                </p>
 
+                <p class="container2-P2">Developer Communication</p>
+                <p class="container2-P3">
+                    The documents and guidelines of the community must be followed by every member.
+                    <br/><br/>
+                    It is recommended that developers connect via Microsoft Teams or email.
+                   These are not hard regulations, but rather guidelines. They seek to enhance collaboration, optimise our process, and provide advantages to our goods as well as to individual developers.
+                   <br/><br/>
+                   The Elite development team is available for assistance if you have any issues regarding these criteria.                </p>
 
-                    </form>
+                <p class="container2-P2">Code Format</p>
+                <p class="container2-P3">
+                    <ol>
+                        <li>There should only be one code command per line. </li>
+                        <li>Keep the space between code blocks at two lines.</li>
+                    </ol>
+                </p>
 
-                    <?php
-                    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                        // Get form data
-                        $name = $_POST["name"];
-                        $email = $_POST["email"];
-                        $feedback = $_POST["comment"];
-
-                        // Create email message
-                        $to = "engineer.mahamohammed@gmail.com"; // replace with your email address
-                        $subject = "Feedback from $name";
-                        $message = "Name: $name\nEmail: $email\nFeedback:\n$feedback";
-
-                        // Send email
-                        mail($to, $subject, $message);
-
-                        // Display a thank you message
-                        echo "<p style='color:green'>Thank you for your feedback!</p>";
-                    }
-                    ?>
+                <p class="container2-P2">Code Scope</p>
+                <p class="container2-P3">
+                    <ol>
+                        <li>Classes that have just default constructor values should use default constructors. </li>
+                        <li>Use the keyword "final" unless it pertains to constants.</li>
+                    </ol>
                 </p>
 
 
+                <p class="container2-P2">Other Code-Related Information</p>
+                <p class="container2-P3">
+                    <ol>
+                        <li>Each variable's name should have meant and be pertinent to its intended use.  </li>
+                        <li>There should be a brief statement describing the purpose of each group or block of code.</li>
+                    </ol>
+                </p>
+
+                <p class="container2-P2">Creating Secure Software </p>
+                <p class="container2-P3">
+
+                    Although it might not be the most thrilling aspect of writing code, it is imperative to take security threats into account. Analyzing security risks should start early in the project and continue all the way through to conclusion.
+                    <br/><br/>
+                    <ol>
+                        <li>Learn about the security threats related to the project's components. </li>
+                        <li>Steers clear of depending just on default configurations and software that comes with the box. </li>
+                    </ol>
+                </p>
+
+                <p class="container2-P2">Which Language Should I Use for Programming?  </p>
+                <p class="container2-P3">
+
+                    Regarding programming languages, we don't have any hard regulations. We use JS, CSS, PHP, and HTML now, however we're open to changes for better project outcomes.                    <br/><br/>
+                    Code Comments
+                    <ol>
+                        <li>Comments on the code should provide an explanation for its actions. </li>
+                        <li>Make sure your indentation is standardized. </li>
+                        <li>Make use of the horizontal whitespace (code blocks and paragraphs).  </li>
+                        <li>Don't write lines that are longer than 75-80 characters.</li>
+
+                    </ol>
+                </p>
+
+                <p class="container2-P2">Using the bug Tracker</p>
+                <p class="container2-P3">
+
+                    The recommended method for reporting issues, asking for features, and making pull requests is the bug tracker.                   <br/><br/>
+                    Requests for Features
+                    <ol>
+                        <li>Make sure the objectives and scope of the project align with your idea.</li>
+                        <li>Make a strong argument to argue in favor of the feature.</li>
+
+                    </ol>
+
+                    <br/><br/>
+                    Requests for Pulls
+                    <ol>
+                        <li>Good pull requests include patches, upgrades, and new features.</li>
+                        <li>Aim for focused pull requests and steer clear of irrelevant commits.</li>
+                        <li>Before you begin, find out the scope of the pull request from a maintainer.</li>
+                    </ol>
+                </p>
+
+                <p class="container2-P2">Bug Report </p>
+                <p class="container2-P3">
+                    Contains: <br/><br/>
+                    Title: Concise and precise.
+                    Summary: In-depth justification is provided.
+                    Visual evidence: Video or screenshots are provided.
+                    Expected versus actual result: succinct and direct.
+                    Steps that led to the issue are those that are repeatable.
+                    Environment: OS, browser, screen resolution, and zoom degree.
+                    Log from the console: Find the source of the issue.
+                    URL of the source: To rapidly determine the problem.
+                    Priority and severity: The degree of impact and the urgency of the investigation.
+                    Name of the reporter, recipient, deadline, and exchange with the customer or user.
+                    Create a report using this data and send it to <a href="mailto:elite.github@gmail.com"> elite.github@gmail.com </a> for support.
+                </p>
             </div>
             <!--right image-->
             <div class="imgRightBox">
+                <img src="img/container2.png" alt="" class="container2-img">
+                <img src="img/container2.png" alt="" class="container2-img">
+                <img src="img/container2.png" alt="" class="container2-img">
+                <img src="img/container2.png" alt="" class="container2-img">
                 <img src="img/container2.png" alt="" class="container2-img">
 
             </div>
@@ -400,6 +461,7 @@
 
     </main>
 
+
     <!---------------------------- Your Code end is here ---------------------------->
     <!-- footer code start here -->
     <footer>
@@ -408,9 +470,12 @@
             <img class="logoFooter" src="meta/logo.png" alt="logo" width="90px" height="90px">
             <p>The best collaboration application </p>
         </column>
+
     </footer>
     <!-- ends of footer -->
 
+
+    <!--java script code for burger menu-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </body>

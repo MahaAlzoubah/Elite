@@ -270,11 +270,11 @@
            About Us
         </a>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="whatelite.html">What is Elite?</a></li>
-          <li><a class="dropdown-item" href="priv.html">Privcy & Policy</a></li>
-          <li><a class="dropdown-item" href="lic.html">License</a></li>
-          <li><a class="dropdown-item" href="chang.html">Change Log</a></li>
-          <li><a class="dropdown-item" href="screen.html">Screenshots</a></li>
+          <li><a class="dropdown-item" href="whatelite.php">What is Elite?</a></li>
+          <li><a class="dropdown-item" href="priv.php">Privcy & Policy</a></li>
+          <li><a class="dropdown-item" href="lic.php">License</a></li>
+          <li><a class="dropdown-item" href="chang.php">Change Log</a></li>
+          <li><a class="dropdown-item" href="screen.php">Screenshots</a></li>
           </ul>
        </div>
        <div class="dropdown">
@@ -282,12 +282,13 @@
            Improvment
         </a>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="de-fet-req.html">Features & Requirements</a></li>
-          <li><a class="dropdown-item" href="de-code.html">Code of conduct</a></li>
-          <li><a class="dropdown-item" href="de-doc.html">Developer documentation</a></li>
-          <li><a class="dropdown-item" href="de-guid.html">Developer guidlines</a></li>
+          <li><a class="dropdown-item" href="de-fet-req.php">Features & Requirements</a></li>
+          <li><a class="dropdown-item" href="de-code.php">Code of conduct</a></li>
+          <li><a class="dropdown-item" href="de-doc.php">Developer documentation</a></li>
+          <li><a class="dropdown-item" href="de-guid.php">Developer guidlines</a></li>
           <li><a class="dropdown-item" href="https://discord.gg/3BpZhYgY">Message forum </a></li>
           <li><a class="dropdown-item" href="user-feed.php">Feedback</a></li>
+          <li><a class="dropdown-item" href="https://github.com/MahaAlzoubah/Elite">Github repository</a></li>
           <li><a class="dropdown-item" href="https://github.com/MahaAlzoubah/Elite/issues">Issue reporting</a></li>
 
           </ul>
@@ -298,14 +299,43 @@
            Discover
         </a>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="discover.html">Why Us?</a></li>
-          <li><a class="dropdown-item" href="user-annouc.html">Annoucment</a></li>
+          <li><a class="dropdown-item" href="discover.php">Why Us?</a></li>
+          <li><a class="dropdown-item" href="user-annouc.php">Annoucment</a></li>
           <li><a class="dropdown-item" href="user-feed.php">Feedback</a></li>
           <li><a class="dropdown-item" href="https://github.com/MahaAlzoubah/Elite/issues">Issue reporting</a></li>
 
           </ul>
        </div>
 
+       <button style=" margin-left: 30px; color:white; background-color: transparent; border:none" onclick="window.location.href='download.php?file=Elite.zip';">Download</button>
+
+
+     <?php
+     if (!empty($_GET['file']))
+     {
+     $filename=basename($_GET['file']);
+     $filepath= './'. $filename;
+     if(!empty($filename) && file_exists($filepath)){
+
+       //define headers
+       header("cache-control: public");
+       header("content-description: File Transfer");
+       header("Content-Disposition: attachment; filename=$filename");
+       header('Content-Type: application/octet-stream');
+       header('Content-Length: ' . filesize($filepath));
+       header("Content-Transfer-Encoding: binary");
+
+       ob_clean(); // Clean (erase) the output buffer
+       flush();    // Flush system output buffer
+       readfile($filepath);
+       exit;
+
+     }
+     else{
+       echo "This File Does not exist.";
+     }
+     }
+     ?>
     </links>
 
 </nav>
@@ -379,7 +409,7 @@
                         </li>
                     </ol>
                 </section>
-            
+
                 <section id="requirements">
                     <h2>Requirements Document - Elite</h2>
                     <h3>Functional Requirements:</h3>
@@ -418,7 +448,7 @@
                             </ul>
                         </li>
                     </ol>
-            
+
                     <h3>Non-functional Requirements:</h3>
                     <ol>
                         <li><strong>Security:</strong>
@@ -452,7 +482,7 @@
                             </ul>
                         </li>
                     </ol>
-            
+
                     <h3>Regulatory Compliance:</h3>
                     <ol>
                         <li><strong>Legal and Regulatory Standards:</strong>
@@ -468,7 +498,7 @@
                             </ul>
                         </li>
                     </ol>
-            
+
                     <h3>Testing Requirements:</h3>
                     <ol>
                         <li><strong>User Acceptance Testing (UAT):</strong>
@@ -490,7 +520,7 @@
                             </ul>
                         </li>
                     </ol>
-            
+
                     <h3>Documentation Requirements:</h3>
                     <ol>
                         <li><strong>User Guides:</strong>
@@ -506,7 +536,7 @@
                             </ul>
                         </li>
                     </ol>
-            
+
                     <h3>Dependencies:</h3>
                     <ol>
                         <li><strong>Third-Party Integrations:</strong>
@@ -523,7 +553,7 @@
                     </ol>
                 </section>
 
-                
+
             </div>
             <!--right image-->
             <div class="imgRightBox">
@@ -532,10 +562,10 @@
                 <img src="img/container2.png" alt="" class="container2-img"> <br/> <br/> <br/>
                 <img src="img/container2.png" alt="" class="container2-img"> <br/> <br/> <br/>
                 <img src="img/container2.png" alt="" class="container2-img"> <br/> <br/> <br/>
-                <img src="img/container2.png" alt="" class="container2-img"> 
+                <img src="img/container2.png" alt="" class="container2-img">
 
             </div>
-            
+
         </div>
         <!--end container2-->
 
@@ -544,7 +574,7 @@
     ]
 
 
-    
+
 
     <!---------------------------- Your Code end is here ---------------------------->
     <!-- footer code start here -->

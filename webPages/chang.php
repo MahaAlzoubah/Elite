@@ -256,6 +256,7 @@
 
     /* footer style ends here */
 </style>
+
 <!-- Don't open this until we write PHP I alert you, you will scroll for rest of your life this is css code for page -->
 </head>
 
@@ -269,11 +270,11 @@
            About Us
         </a>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="whatelite.html">What is Elite?</a></li>
-          <li><a class="dropdown-item" href="priv.html">Privcy & Policy</a></li>
-          <li><a class="dropdown-item" href="lic.html">License</a></li>
-          <li><a class="dropdown-item" href="chang.html">Change Log</a></li>
-          <li><a class="dropdown-item" href="screen.html">Screenshots</a></li>
+          <li><a class="dropdown-item" href="whatelite.php">What is Elite?</a></li>
+          <li><a class="dropdown-item" href="priv.php">Privcy & Policy</a></li>
+          <li><a class="dropdown-item" href="lic.php">License</a></li>
+          <li><a class="dropdown-item" href="chang.php">Change Log</a></li>
+          <li><a class="dropdown-item" href="screen.php">Screenshots</a></li>
           </ul>
        </div>
        <div class="dropdown">
@@ -281,12 +282,13 @@
            Improvment
         </a>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="de-fet-req.html">Features & Requirements</a></li>
-          <li><a class="dropdown-item" href="de-code.html">Code of conduct</a></li>
-          <li><a class="dropdown-item" href="de-doc.html">Developer documentation</a></li>
-          <li><a class="dropdown-item" href="de-guid.html">Developer guidlines</a></li>
+          <li><a class="dropdown-item" href="de-fet-req.php">Features & Requirements</a></li>
+          <li><a class="dropdown-item" href="de-code.php">Code of conduct</a></li>
+          <li><a class="dropdown-item" href="de-doc.php">Developer documentation</a></li>
+          <li><a class="dropdown-item" href="de-guid.php">Developer guidlines</a></li>
           <li><a class="dropdown-item" href="https://discord.gg/3BpZhYgY">Message forum </a></li>
           <li><a class="dropdown-item" href="user-feed.php">Feedback</a></li>
+          <li><a class="dropdown-item" href="https://github.com/MahaAlzoubah/Elite">Github repository</a></li>
           <li><a class="dropdown-item" href="https://github.com/MahaAlzoubah/Elite/issues">Issue reporting</a></li>
 
           </ul>
@@ -297,19 +299,49 @@
            Discover
         </a>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="discover.html">Why Us?</a></li>
-          <li><a class="dropdown-item" href="user-annouc.html">Annoucment</a></li>
+          <li><a class="dropdown-item" href="discover.php">Why Us?</a></li>
+          <li><a class="dropdown-item" href="user-annouc.php">Annoucment</a></li>
           <li><a class="dropdown-item" href="user-feed.php">Feedback</a></li>
           <li><a class="dropdown-item" href="https://github.com/MahaAlzoubah/Elite/issues">Issue reporting</a></li>
 
           </ul>
        </div>
 
+       <button style=" margin-left: 30px; color:white; background-color: transparent; border:none" onclick="window.location.href='download.php?file=Elite.zip';">Download</button>
+
+
+     <?php
+     if (!empty($_GET['file']))
+     {
+     $filename=basename($_GET['file']);
+     $filepath= './'. $filename;
+     if(!empty($filename) && file_exists($filepath)){
+
+       //define headers
+       header("cache-control: public");
+       header("content-description: File Transfer");
+       header("Content-Disposition: attachment; filename=$filename");
+       header('Content-Type: application/octet-stream');
+       header('Content-Length: ' . filesize($filepath));
+       header("Content-Transfer-Encoding: binary");
+
+       ob_clean(); // Clean (erase) the output buffer
+       flush();    // Flush system output buffer
+       readfile($filepath);
+       exit;
+
+     }
+     else{
+       echo "This File Does not exist.";
+     }
+     }
+     ?>
     </links>
 
 </nav>
 
 <!-- navbar end -->
+
     <!---------------------------- main start here ---------------------------->
     <main>
         <!--start container2-->
@@ -317,121 +349,83 @@
 
             <!--left text(title, para,...etc)-->
             <div class="container2-text">
-                <p class="container2-P1">Developer Guidelines</p>
+                <p class="container2-P1">Change Log</p>
+
+                <p class="container2-P2">Elite</p>
+
+
                 <p class="container2-P3">
-                   <br/><br/> Welcome to the community supporting Elite development! The purpose of these guidelines is to facilitate your effective participation in the project. Before you begin working on Elite, please review these a bit. 
+                    All significant changes to the Elite project will be documented in this file. The format adheres to the principles of Keep a Changelog, and the project follows Semantic Versioning.
                 </p>
+                        <!-- Change Log Entry 3 -->
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="card-body">
+                                <h3>[1.0.0] - 2024-02-01</h3>
+                                <h4>Added</h4>
+                                <ul>
+                                    <li>Added a blog section for sharing community insights and updates.</li>
+                                    <li>Introduced a new user dashboard with personalized settings.</li>
+                                    <li>Integrated social media sharing options for articles and pages.</li>
+                                </ul>
+                                <h4>Changed</h4>
+                                <ul>
+                                    <li>Reorganized the project's folder structure for better code organization.</li>
+                                    <li>Upgraded the server infrastructure to improve website performance.</li>
+                                    <li>Changed the default color scheme to a more modern and vibrant palette.</li>
+                                </ul>
+                                <p class="container2-P3">Contributors for this release: <a href="https://twitter.com/MahaAlzouba">@MahaAlzouba</a>, <a href="https://twitter.com/NoorJafaar">@NoorJafaar</a>, <a href="https://twitter.com/FatemaSalman">@FatemaSalman</a>.</p>
+                            </div>
+                        </div>
 
-                <p class="container2-P2">Developer Communication</p>
-                <p class="container2-P3">
-                    The documents and guidelines of the community must be followed by every member.                     
-                    <br/><br/>
-                    It is recommended that developers connect via Microsoft Teams or email. 
-                   These are not hard regulations, but rather guidelines. They seek to enhance collaboration, optimise our process, and provide advantages to our goods as well as to individual developers. 
-                   <br/><br/>
-                   The Elite development team is available for assistance if you have any issues regarding these criteria.                </p>
+                        <!-- Change Log Entry 4 -->
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="card-body">
+                                <h3>[0.9.0] - 2023-12-15</h3>
+                                <h4>Fixed</h4>
+                                <ul>
+                                    <li>Fixed a critical security vulnerability related to user authentication.</li>
+                                    <li>Resolved issues causing intermittent downtime during high traffic periods.</li>
+                                    <li>Fixed broken image links on certain pages.</li>
+                                </ul>
+                                <p class="container2-P3">Contributors for this release: <a href="https://twitter.com/MahaAlzouba">@MahaAlzouba</a>, <a href="https://twitter.com/NoorJafaar">@NoorJafaar</a>.</p>
+                            </div>
+                        </div>
 
-                <p class="container2-P2">Code Format</p>
-                <p class="container2-P3"> 
-                    <ol>
-                        <li>There should only be one code command per line. </li>
-                        <li>Keep the space between code blocks at two lines.</li>
-                    </ol>            
-                </p>
+                        <!-- Change Log Entry 5 -->
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="card-body">
+                                <h3>[0.8.1] - 2023-11-28</h3>
+                                <h4>Changed</h4>
+                                <ul>
+                                    <li>Improved error handling for a more user-friendly experience.</li>
+                                    <li>Updated third-party libraries to the latest versions for security patches.</li>
+                                    <li>Changed the contact form layout for better usability.</li>
+                                </ul>
+                                <h4>Fixed</h4>
+                                <ul>
+                                    <li>Fixed broken links in the documentation section.</li>
+                                    <li>Addressed cross-browser compatibility issues with Internet Explorer.</li>
+                                    <li>Fixed alignment problems on the mobile version of the site.</li>
+                                </ul>
+                                <p class="container2-P3">Contributors for this release: <a href="https://twitter.com/gmx.32">@gmx.32</a>, <a href="https://twitter.com/sudomaze">@NoorJafaar</a>, <a href="https://twitter.com/unifoliatus">@FatemaSalman</a>.</p>
+                            </div>
+                        </div>
 
-                <p class="container2-P2">Code Scope</p>
-                <p class="container2-P3"> 
-                    <ol>
-                        <li>Classes that have just default constructor values should use default constructors. </li>
-                        <li>Use the keyword "final" unless it pertains to constants.</li>
-                    </ol>            
-                </p>
+                        <!-- Add more change log entries as needed -->
 
-
-                <p class="container2-P2">Other Code-Related Information</p>
-                <p class="container2-P3"> 
-                    <ol>
-                        <li>Each variable's name should have meant and be pertinent to its intended use.  </li>
-                        <li>There should be a brief statement describing the purpose of each group or block of code.</li>
-                    </ol>            
-                </p>
-
-                <p class="container2-P2">Creating Secure Software </p>
-                <p class="container2-P3"> 
-
-                    Although it might not be the most thrilling aspect of writing code, it is imperative to take security threats into account. Analyzing security risks should start early in the project and continue all the way through to conclusion.
-                    <br/><br/>
-                    <ol>
-                        <li>Learn about the security threats related to the project's components. </li>
-                        <li>Steers clear of depending just on default configurations and software that comes with the box. </li>
-                    </ol>            
-                </p>
-
-                <p class="container2-P2">Which Language Should I Use for Programming?  </p>
-                <p class="container2-P3"> 
-
-                    Regarding programming languages, we don't have any hard regulations. We use JS, CSS, PHP, and HTML now, however we're open to changes for better project outcomes.                    <br/><br/>
-                    Code Comments
-                    <ol>
-                        <li>Comments on the code should provide an explanation for its actions. </li>
-                        <li>Make sure your indentation is standardized. </li>
-                        <li>Make use of the horizontal whitespace (code blocks and paragraphs).  </li>
-                        <li>Don't write lines that are longer than 75-80 characters.</li>
-
-                    </ol>            
-                </p>
-
-                <p class="container2-P2">Using the bug Tracker</p>
-                <p class="container2-P3"> 
-
-                    The recommended method for reporting issues, asking for features, and making pull requests is the bug tracker.                   <br/><br/>
-                    Requests for Features
-                    <ol>
-                        <li>Make sure the objectives and scope of the project align with your idea.</li>
-                        <li>Make a strong argument to argue in favor of the feature.</li>
-
-                    </ol>  
-
-                    <br/><br/>
-                    Requests for Pulls
-                    <ol>
-                        <li>Good pull requests include patches, upgrades, and new features.</li>
-                        <li>Aim for focused pull requests and steer clear of irrelevant commits.</li>
-                        <li>Before you begin, find out the scope of the pull request from a maintainer.</li>
-                    </ol>           
-                </p>
-                
-                <p class="container2-P2">Bug Report </p>
-                <p class="container2-P3"> 
-                    Contains: <br/><br/>
-                    Title: Concise and precise. 
-                    Summary: In-depth justification is provided. 
-                    Visual evidence: Video or screenshots are provided. 
-                    Expected versus actual result: succinct and direct. 
-                    Steps that led to the issue are those that are repeatable. 
-                    Environment: OS, browser, screen resolution, and zoom degree. 
-                    Log from the console: Find the source of the issue. 
-                    URL of the source: To rapidly determine the problem. 
-                    Priority and severity: The degree of impact and the urgency of the investigation. 
-                    Name of the reporter, recipient, deadline, and exchange with the customer or user. 
-                    Create a report using this data and send it to <a href="mailto:elite.github@gmail.com"> elite.github@gmail.com </a> for support.         
-                </p>
             </div>
             <!--right image-->
             <div class="imgRightBox">
-                <img src="img/container2.png" alt="" class="container2-img">
-                <img src="img/container2.png" alt="" class="container2-img">
-                <img src="img/container2.png" alt="" class="container2-img">
-                <img src="img/container2.png" alt="" class="container2-img">
-                <img src="img/container2.png" alt="" class="container2-img">
+                <img src="img/container2.png" alt="" class="container2-img"> <br/> <br/> <br/>
+                <img src="img/container2.png" alt="" class="container2-img"> <br/> <br/> <br/>
+                <img src="img/container2.png" alt="" class="container2-img"> <br/> <br/> <br/>
 
             </div>
-            
+
         </div>
         <!--end container2-->
 
     </main>
-
 
     <!---------------------------- Your Code end is here ---------------------------->
     <!-- footer code start here -->
@@ -446,7 +440,7 @@
     <!-- ends of footer -->
 
 
-    <!--java script code for burger menu-->
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </body>

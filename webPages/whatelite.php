@@ -261,56 +261,86 @@
 </head>
 
 <body>
-       <!-- navbar start Open by clikcing on arrow, but keep it close for your mental health-->
-       <nav>
-        <img id="logo" src="meta/logo.png" alt="logo" width="100px" height="100px">
-        <links>
-            <a href="homePage.php">Home</a>
-            <a class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-               About Us
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="whatelite.html">What is Elite?</a></li>
-              <li><a class="dropdown-item" href="priv.html">Privcy & Policy</a></li>
-              <li><a class="dropdown-item" href="lic.html">License</a></li>
-              <li><a class="dropdown-item" href="chang.html">Change Log</a></li>
-              <li><a class="dropdown-item" href="screen.html">Screenshots</a></li>
-              </ul>
-           </div>
-           <div class="dropdown">
-            <a class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-               Improvment
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="de-fet-req.html">Features & Requirements</a></li>
-              <li><a class="dropdown-item" href="de-code.html">Code of conduct</a></li>
-              <li><a class="dropdown-item" href="de-doc.html">Developer documentation</a></li>
-              <li><a class="dropdown-item" href="de-guid.html">Developer guidlines</a></li>
-              <li><a class="dropdown-item" href="https://discord.gg/3BpZhYgY">Message forum </a></li>
-              <li><a class="dropdown-item" href="user-feed.php">Feedback</a></li>
-              <li><a class="dropdown-item" href="https://github.com/MahaAlzoubah/Elite/issues">Issue reporting</a></li>
+   <!-- navbar start Open by clikcing on arrow, but keep it close for your mental health-->
+   <nav>
+    <img id="logo" src="meta/logo.png" alt="logo" width="100px" height="100px">
+    <links>
+        <a href="homePage.php">Home</a>
+        <a class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+           About Us
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="whatelite.php">What is Elite?</a></li>
+          <li><a class="dropdown-item" href="priv.php">Privcy & Policy</a></li>
+          <li><a class="dropdown-item" href="lic.php">License</a></li>
+          <li><a class="dropdown-item" href="chang.php">Change Log</a></li>
+          <li><a class="dropdown-item" href="screen.php">Screenshots</a></li>
+          </ul>
+       </div>
+       <div class="dropdown">
+        <a class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+           Improvment
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="de-fet-req.php">Features & Requirements</a></li>
+          <li><a class="dropdown-item" href="de-code.php">Code of conduct</a></li>
+          <li><a class="dropdown-item" href="de-doc.php">Developer documentation</a></li>
+          <li><a class="dropdown-item" href="de-guid.php">Developer guidlines</a></li>
+          <li><a class="dropdown-item" href="https://discord.gg/3BpZhYgY">Message forum </a></li>
+          <li><a class="dropdown-item" href="user-feed.php">Feedback</a></li>
+          <li><a class="dropdown-item" href="https://github.com/MahaAlzoubah/Elite">Github repository</a></li>
+          <li><a class="dropdown-item" href="https://github.com/MahaAlzoubah/Elite/issues">Issue reporting</a></li>
 
-              </ul>
-           </div>
+          </ul>
+       </div>
 
-           <div class="dropdown">
-            <a class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-               Discover
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="discover.html">Why Us?</a></li>
-              <li><a class="dropdown-item" href="user-annouc.html">Annoucment</a></li>
-              <li><a class="dropdown-item" href="user-feed.php">Feedback</a></li>
-              <li><a class="dropdown-item" href="https://github.com/MahaAlzoubah/Elite/issues">Issue reporting</a></li>
+       <div class="dropdown">
+        <a class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+           Discover
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="discover.php">Why Us?</a></li>
+          <li><a class="dropdown-item" href="user-annouc.php">Annoucment</a></li>
+          <li><a class="dropdown-item" href="user-feed.php">Feedback</a></li>
+          <li><a class="dropdown-item" href="https://github.com/MahaAlzoubah/Elite/issues">Issue reporting</a></li>
 
-              </ul>
-           </div>
+          </ul>
+       </div>
 
-        </links>
-  
-    </nav>
-   
-    <!-- navbar end -->
+       <button style=" margin-left: 30px; color:white; background-color: transparent; border:none" onclick="window.location.href='download.php?file=Elite.zip';">Download</button>
+
+
+     <?php
+     if (!empty($_GET['file']))
+     {
+     $filename=basename($_GET['file']);
+     $filepath= './'. $filename;
+     if(!empty($filename) && file_exists($filepath)){
+
+       //define headers
+       header("cache-control: public");
+       header("content-description: File Transfer");
+       header("Content-Disposition: attachment; filename=$filename");
+       header('Content-Type: application/octet-stream');
+       header('Content-Length: ' . filesize($filepath));
+       header("Content-Transfer-Encoding: binary");
+
+       ob_clean(); // Clean (erase) the output buffer
+       flush();    // Flush system output buffer
+       readfile($filepath);
+       exit;
+
+     }
+     else{
+       echo "This File Does not exist.";
+     }
+     }
+     ?>
+    </links>
+
+</nav>
+
+<!-- navbar end -->
 
     <!---------------------------- main start here ---------------------------->
     <main>
@@ -319,34 +349,37 @@
 
             <!--left text(title, para,...etc)-->
             <div class="container2-text">
-                <p class="container2-P1">Features and Requirements</p>
+                <p><a style="text-decoration: none; color: #000000;" class="container2-P1" href="http://elite333.us.to">Elite</a></p>
 
-                <p class="container2-P2">Features</p>
-
-
-                <p class="container2-P3">
-                    <ol>
-                        <li>User-Friendly Booking Platform: - Provide a user-friendly interface that makes booking simple and easy to navigate.</li>
-                        <li>Selection of Exquisite Hotels and Resorts: Offer a carefully selected range of upscale residences that are known for their opulence and grandeur. </li>
-                        <li>Elegant and Stylish Booking Procedure: - Make sure each stage of the booking procedure exudes elegance and sophistication.</li>
-                        <li>Personalized Guest Experience: - Customize offers and suggestions to each visitor's particular tastes and needs.</li>
-                        <li>Transparent Pricing and Policies: - Give customers access to precise pricing details as well as explicit guidelines about bookings, refunds, and extra services.</li>
-                        <li>Secure and Reliable Booking Platform: - Adhere to industry standards for data protection and implement strong encryption mechanisms.</li>
-                        <li>available Customer Support: - Provide easily available methods for guests to voice questions, grievances, and special requests in a timely manner.</li>
-                    </ol>
-                </p>
-
-                <p class="container2-P2">Requirements</p>
+                <p class="container2-P2">Who are we?</p>
 
 
                 <p class="container2-P3">
-                    <ol>
-                        <li>XAMPP Installation Required: Install XAMPP to set up the necessary server environment for hosting the web application. <a href="https://www.apachefriends.org/download.html">Download from here</a></li><br/>
-                        <li>Choice of Text Editor: You may choose any preferred text editor for coding and development purposes. (For instance, Visual Studio Code is recommended.)<a href="https://code.visualstudio.com/download">Download from here</a></li><br/>
-                        <li>	Bootstrap v5.3 Integration Necessary: Bootstrap v5.3 must be integrated into the project as the CSS Framework to ensure consistent styling and layout across the website. <a href="https://getbootstrap.com/">Discover</a> </li><br/>
-                    </ol>
+                    Elite stands as a groundbreaking platform, introducing a novel approach to reserving luxurious rooms through Free and Open-Source Software. Our primary goal is to cater to individuals seeking seamless and user-friendly room booking experiences. At the core of our mission is a commitment to providing an exceptional selection of premium accommodations, ensuring users encounter a level of sophistication and comfort that surpasses expectations.
+
                 </p>
-                <!-- <button class="container2-a">Discover all Rooms</button> -->
+
+                <p class="container2-P3">
+                    Elite aspires to become the preferred choice for those seeking a refined and elegant room reservation platform. We aim to offer a seamless and sophisticated booking experience, specifically tailored for our discerning users. Our dedication to providing top-tier reservations is mirrored in our pursuit of creating a platform that seamlessly aligns with the principles of freedom and transparency.
+                </p>
+
+                <p class="container2-P3">
+                    Just like Free Software principles, Elite emphasizes the user's right to access, modify, and enhance the software we provide. While our platform offers a premium reservation service, we believe in the importance of freedom over cost. We advocate for the liberty of choice, ensuring that everyone, regardless of their room preferences, has the autonomy to shape their experiences.
+                </p>
+
+                <p class="container2-P3">
+                    Elite invites you to join our community, one that values personal choice and transparency. Your contributions can play a pivotal role in enhancing our platform, ensuring broader compatibility, increased utility, and no user lock-in. We firmly believe that Free and Open-Source Software can deliver superior quality, heightened reliability, enhanced security, and unparalleled flexibility compared to proprietary alternatives.
+                </p>
+
+                <p class="container2-P3">
+                    The Elite community is the life force of our project, fostering collaborative development that consistently exceeds expectations. With various roles available, we extend an invitation to individuals from diverse backgrounds to contribute and shape the future of sophisticated room reservation experiences.
+                </p>
+
+                <p class="container2-P3">
+                    Our principles, as outlined in the statutes of Elite, guide our collaborative efforts and encourage new members to contribute in a way that benefits the entire community. Through the use of copyleft licenses such as the <a href="https://mit-license.org/">MIT</a>.
+                </p>
+
+
             </div>
             <!--right image-->
             <div class="imgRightBox">
@@ -354,7 +387,7 @@
                 <img src="img/container2.png" alt="" class="container2-img">
 
             </div>
-            
+
         </div>
         <!--end container2-->
 
@@ -368,8 +401,10 @@
             <img class="logoFooter" src="meta/logo.png" alt="logo" width="90px" height="90px">
             <p>The best collaboration application </p>
         </column>
+
     </footer>
     <!-- ends of footer -->
+
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

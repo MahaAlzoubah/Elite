@@ -256,59 +256,89 @@
 
     /* footer style ends here */
 </style>
+
 <!-- Don't open this until we write PHP I alert you, you will scroll for rest of your life this is css code for page -->
 </head>
 
 <body>
     <!-- navbar start Open by clikcing on arrow, but keep it close for your mental health-->
-      <!-- navbar start Open by clikcing on arrow, but keep it close for your mental health-->
-      <nav>
-        <img id="logo" src="meta/logo.png" alt="logo" width="100px" height="100px">
-        <links>
-            <a href="homePage.php">Home</a>
-            <a class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-               About Us
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="whatelite.html">What is Elite?</a></li>
-              <li><a class="dropdown-item" href="priv.html">Privcy & Policy</a></li>
-              <li><a class="dropdown-item" href="lic.html">License</a></li>
-              <li><a class="dropdown-item" href="chang.html">Change Log</a></li>
-              <li><a class="dropdown-item" href="screen.html">Screenshots</a></li>
-              </ul>
-           </div>
-           <div class="dropdown">
-            <a class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-               Improvment
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="de-fet-req.html">Features & Requirements</a></li>
-              <li><a class="dropdown-item" href="de-code.html">Code of conduct</a></li>
-              <li><a class="dropdown-item" href="de-doc.html">Developer documentation</a></li>
-              <li><a class="dropdown-item" href="de-guid.html">Developer guidlines</a></li>
-              <li><a class="dropdown-item" href="https://discord.gg/3BpZhYgY">Message forum </a></li>
-              <li><a class="dropdown-item" href="user-feed.php">Feedback</a></li>
-              <li><a class="dropdown-item" href="https://github.com/MahaAlzoubah/Elite/issues">Issue reporting</a></li>
+    <nav>
+     <img id="logo" src="meta/logo.png" alt="logo" width="100px" height="100px">
+     <links>
+         <a href="homePage.php">Home</a>
+         <a class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            About Us
+         </a>
+         <ul class="dropdown-menu">
+           <li><a class="dropdown-item" href="whatelite.php">What is Elite?</a></li>
+           <li><a class="dropdown-item" href="priv.php">Privcy & Policy</a></li>
+           <li><a class="dropdown-item" href="lic.php">License</a></li>
+           <li><a class="dropdown-item" href="chang.php">Change Log</a></li>
+           <li><a class="dropdown-item" href="screen.php">Screenshots</a></li>
+           </ul>
+        </div>
+        <div class="dropdown">
+         <a class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Improvment
+         </a>
+         <ul class="dropdown-menu">
+           <li><a class="dropdown-item" href="de-fet-req.php">Features & Requirements</a></li>
+           <li><a class="dropdown-item" href="de-code.php">Code of conduct</a></li>
+           <li><a class="dropdown-item" href="de-doc.php">Developer documentation</a></li>
+           <li><a class="dropdown-item" href="de-guid.php">Developer guidlines</a></li>
+           <li><a class="dropdown-item" href="https://discord.gg/3BpZhYgY">Message forum </a></li>
+           <li><a class="dropdown-item" href="user-feed.php">Feedback</a></li>
+           <li><a class="dropdown-item" href="https://github.com/MahaAlzoubah/Elite">Github repository</a></li>
+           <li><a class="dropdown-item" href="https://github.com/MahaAlzoubah/Elite/issues">Issue reporting</a></li>
 
-              </ul>
-           </div>
+           </ul>
+        </div>
 
-           <div class="dropdown">
-            <a class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-               Discover
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="discover.html">Why Us?</a></li>
-              <li><a class="dropdown-item" href="user-annouc.html">Annoucment</a></li>
-              <li><a class="dropdown-item" href="user-feed.php">Feedback</a></li>
-              <li><a class="dropdown-item" href="https://github.com/MahaAlzoubah/Elite/issues">Issue reporting</a></li>
+        <div class="dropdown">
+         <a class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Discover
+         </a>
+         <ul class="dropdown-menu">
+           <li><a class="dropdown-item" href="discover.php">Why Us?</a></li>
+           <li><a class="dropdown-item" href="user-annouc.php">Annoucment</a></li>
+           <li><a class="dropdown-item" href="user-feed.php">Feedback</a></li>
+           <li><a class="dropdown-item" href="https://github.com/MahaAlzoubah/Elite/issues">Issue reporting</a></li>
 
-              </ul>
-           </div>
+           </ul>
+        </div>
 
-        </links>
-  
-    </nav>
+        <button style=" margin-left: 30px; color:white; background-color: transparent; border:none" onclick="window.location.href='download.php?file=Elite.zip';">Download</button>
+
+
+      <?php
+      if (!empty($_GET['file']))
+      {
+      $filename=basename($_GET['file']);
+      $filepath= './'. $filename;
+      if(!empty($filename) && file_exists($filepath)){
+
+        //define headers
+        header("cache-control: public");
+        header("content-description: File Transfer");
+        header("Content-Disposition: attachment; filename=$filename");
+        header('Content-Type: application/octet-stream');
+        header('Content-Length: ' . filesize($filepath));
+        header("Content-Transfer-Encoding: binary");
+
+        ob_clean(); // Clean (erase) the output buffer
+        flush();    // Flush system output buffer
+        readfile($filepath);
+        exit;
+
+      }
+      else{
+        echo "This File Does not exist.";
+      }
+      }
+      ?>
+     </links>
+
+ </nav>
     <!-- navbar end -->
 
     <!---------------------------- main start here ---------------------------->
@@ -318,56 +348,46 @@
 
             <!--left text(title, para,...etc)-->
             <div class="container2-text">
-                <p class="container2-P1">Developer Documentation </p>
+                <p class="container2-P1">Code of Conduct </p>
+
+                <p class="container2-P2">Elite Code of Conduct</p>
+
 
                 <p class="container2-P2">Overview</p>
                 <p class="container2-P3">
-                    Welcome to Elite's developer docs! This section provides a comprehensive overview of our web application's codebase and how to contribute to it. PHP is the main programming language used on our hotel booking website; JavaScript, HTML, and CSS are also used. We make use of the Bootstrap framework to improve styling and guarantee cross-device responsiveness.
+                    We, the project's contributors, and maintainers, promise to respect everyone who participates by filing bug reports, making feature requests, adding to the documentation, pulling requests, and other actions.
+                    Regardless of experience level, gender, gender identity and expression, handicap, physical appearance, body size, color, ethnicity, age, religion, or nationality, we are dedicated to ensuring that everyone involved in this project is free from harassment.
                 </p>
 
-
-                <p class="container2-P2">Getting Started</p>
+                <p class="container2-P2">Our Standards</p>
                 <p class="container2-P3">
-                    Please take the following actions to configure Elite locally using XAMPP: <br/> <br/>
-                    <ol>
-                        <li>Use git clone [your repository URL] to clone the repository.</li><br/>
-                        <li>Transfer the project folder to the htdocs directory of XAMPP.</li><br/>
-                        <li>Launch XAMPP and make sure MySQL and Apache are up and working.</li><br/>
-                        <li>4. In phpMyAdmin, create a new database.</li><br/>
-                        <li>Update the config.php file with your database credentials to configure the database.</li><br/>
-                        <li>Open your browser and go to <a href="https://github.com/MahaAlzoubah/Elite"> https://github.com/MahaAlzoubah/Elite </a></li><br/>
+                    Some Examples of behavior that contributes to creating a positive environment include:
+                    Focusing on what is best for the community, being respectful of others' perspectives and experiences, accepting constructive criticism with grace, speaking in a kind and inclusive manner, and empathetically relating to other community members.
 
-                    </ol>
+                    <br/>
+                    Some Examples of unacceptable behavior by participants include:
+                    Insults, disparaging remarks, and political or personal assaults Harassment in public or private; disclosing another person's personal information—like their physical or email address—without their consent; and engaging in any other behavior that would be deemed improper in a work environment.
                 </p>
-                <p class="container2-P2">Dependencies</p>
+
+                <p class="container2-P2">Responsibilities of Contributors</p>
                 <p class="container2-P3">
-                    The following are the main dependencies on which <a href="http://elite333.us.to">Elite</a> depends: <br/><br/>
-                    
-                    Bootstrap: A responsive and mobile-first design is guaranteed by this front-end framework. See the composer.json file for a full list of dependencies.
+                    The right and obligation to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that do not adhere to this code of conduct rests with the project maintainers. They also have the authority to ban any contributor temporarily or permanently for any other behaviors that they consider to be improper, threatening, offensive, or harmful.
                 </p>
 
-                <p class="container2-P2">PHP on the backend </p>
+                <p class="container2-P2">Scope</p>
                 <p class="container2-P3">
-                    PHP is mostly used for the backend logic. Important files and directories to be mindful of consist of: <br/><br/>
-                    Models - Controllers - Database communication
-
+                    When someone is speaking on behalf of the project or its community in public, they are bound by this code of conduct. Using an official project email address, publishing content on an official social media account, or serving as a designated representative at an online or offline event are a few instances of representing a project or community.
                 </p>
 
-                <p class="container2-P2">Frontend Bootstrap HTML, CSS, and JavaScript </p>
+                <p class="container2-P2">Enforcement</p>
                 <p class="container2-P3">
-                    HTML provides structure, CSS with Bootstrap styling, and JavaScript for interactivity in the frontend components. Important files and folders consist of: <br/><br/>
+                    Reporting abusive, harassing, or otherwise inappropriate behavior can be done by sending an email to <a href="mailto:elite.github@gmail.com"> elite.github@gmail.com</a>, the project team. All concerns will be examined and investigated by the project team, which will then take the appropriate action given the situation. The project team has a duty to keep the identity of the incident reported discreet.                </p>
 
-                    JavaScript scripts for front-end functions 
-                  <ul>
-                    <li> User interface element HTML templates 
-                    <li>Bootstrap integration with CSS files for style and responsive design.</li>
-                </li>
-
-                  </ul>
-                </p>
+                <p class="container2-P2">Attribution</p>
                 <p class="container2-P3">
-                   <br/><br/> For developers looking to comprehend, improve, and add to the functionality and performance of <a href="http://elite333.us.to">Elite</a>, this documentation offers an extensive resource.
-                </p>
+                    This Code of Conduct is adapted from the Contributor Covenant, version 2.0, available <a href="https://www.contributor-covenant.org/version/2/0/code_of_conduct/ "> here</a></p>
+
+
 
                 <!-- <button class="container2-a">Discover all Rooms</button> -->
             </div>
@@ -376,8 +396,9 @@
                 <img src="img/container2.png" alt="" class="container2-img">
                 <img src="img/container2.png" alt="" class="container2-img">
                 <img src="img/container2.png" alt="" class="container2-img">
+
             </div>
-            
+
         </div>
         <!--end container2-->
 

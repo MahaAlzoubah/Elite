@@ -270,11 +270,11 @@
            About Us
         </a>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="whatelite.html">What is Elite?</a></li>
-          <li><a class="dropdown-item" href="priv.html">Privcy & Policy</a></li>
-          <li><a class="dropdown-item" href="lic.html">License</a></li>
-          <li><a class="dropdown-item" href="chang.html">Change Log</a></li>
-          <li><a class="dropdown-item" href="screen.html">Screenshots</a></li>
+          <li><a class="dropdown-item" href="whatelite.php">What is Elite?</a></li>
+          <li><a class="dropdown-item" href="priv.php">Privcy & Policy</a></li>
+          <li><a class="dropdown-item" href="lic.php">License</a></li>
+          <li><a class="dropdown-item" href="chang.php">Change Log</a></li>
+          <li><a class="dropdown-item" href="screen.php">Screenshots</a></li>
           </ul>
        </div>
        <div class="dropdown">
@@ -282,12 +282,13 @@
            Improvment
         </a>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="de-fet-req.html">Features & Requirements</a></li>
-          <li><a class="dropdown-item" href="de-code.html">Code of conduct</a></li>
-          <li><a class="dropdown-item" href="de-doc.html">Developer documentation</a></li>
-          <li><a class="dropdown-item" href="de-guid.html">Developer guidlines</a></li>
+          <li><a class="dropdown-item" href="de-fet-req.php">Features & Requirements</a></li>
+          <li><a class="dropdown-item" href="de-code.php">Code of conduct</a></li>
+          <li><a class="dropdown-item" href="de-doc.php">Developer documentation</a></li>
+          <li><a class="dropdown-item" href="de-guid.php">Developer guidlines</a></li>
           <li><a class="dropdown-item" href="https://discord.gg/3BpZhYgY">Message forum </a></li>
           <li><a class="dropdown-item" href="user-feed.php">Feedback</a></li>
+          <li><a class="dropdown-item" href="https://github.com/MahaAlzoubah/Elite">Github repository</a></li>
           <li><a class="dropdown-item" href="https://github.com/MahaAlzoubah/Elite/issues">Issue reporting</a></li>
 
           </ul>
@@ -298,16 +299,43 @@
            Discover
         </a>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="discover.html">Why Us?</a></li>
-          <li><a class="dropdown-item" href="user-annouc.html">Annoucment</a></li>
+          <li><a class="dropdown-item" href="discover.php">Why Us?</a></li>
+          <li><a class="dropdown-item" href="user-annouc.php">Annoucment</a></li>
           <li><a class="dropdown-item" href="user-feed.php">Feedback</a></li>
           <li><a class="dropdown-item" href="https://github.com/MahaAlzoubah/Elite/issues">Issue reporting</a></li>
 
           </ul>
        </div>
 
-    </links>
+       <button style=" margin-left: 30px; color:white; background-color: transparent; border:none" onclick="window.location.href='download.php?file=Elite.zip';">Download</button>
 
+
+     <?php
+     if (!empty($_GET['file']))
+     {
+     $filename=basename($_GET['file']);
+     $filepath= './'. $filename;
+     if(!empty($filename) && file_exists($filepath)){
+
+       //define headers
+       header("cache-control: public");
+       header("content-description: File Transfer");
+       header("Content-Disposition: attachment; filename=$filename");
+       header('Content-Type: application/octet-stream');
+       header('Content-Length: ' . filesize($filepath));
+       header("Content-Transfer-Encoding: binary");
+
+       ob_clean(); // Clean (erase) the output buffer
+       flush();    // Flush system output buffer
+       readfile($filepath);
+       exit;
+
+     }
+     else{
+       echo "This File Does not exist.";
+     }
+     }
+     ?>
     </links>
 
 </nav>
@@ -321,79 +349,36 @@
 
             <!--left text(title, para,...etc)-->
             <div class="container2-text">
-                <p class="container2-P1">Change Log</p>
+                <p class="container2-P1">License</p>
 
-                <p class="container2-P2">Elite</p>
-
+                <p class="container2-P2">MIT License</p>
 
                 <p class="container2-P3">
-                    All significant changes to the Elite project will be documented in this file. The format adheres to the principles of Keep a Changelog, and the project follows Semantic Versioning.
-                </p>
-                        <!-- Change Log Entry 3 -->
-                        <div class="card mb-3" style="max-width: 540px;">
-                            <div class="card-body">
-                                <h3>[1.0.0] - 2024-02-01</h3>
-                                <h4>Added</h4>
-                                <ul>
-                                    <li>Added a blog section for sharing community insights and updates.</li>
-                                    <li>Introduced a new user dashboard with personalized settings.</li>
-                                    <li>Integrated social media sharing options for articles and pages.</li>
-                                </ul>
-                                <h4>Changed</h4>
-                                <ul>
-                                    <li>Reorganized the project's folder structure for better code organization.</li>
-                                    <li>Upgraded the server infrastructure to improve website performance.</li>
-                                    <li>Changed the default color scheme to a more modern and vibrant palette.</li>
-                                </ul>
-                                <p class="container2-P3">Contributors for this release: <a href="https://twitter.com/MahaAlzouba">@MahaAlzouba</a>, <a href="https://twitter.com/NoorJafaar">@NoorJafaar</a>, <a href="https://twitter.com/FatemaSalman">@FatemaSalman</a>.</p>
-                            </div>
-                        </div>
-            
-                        <!-- Change Log Entry 4 -->
-                        <div class="card mb-3" style="max-width: 540px;">
-                            <div class="card-body">
-                                <h3>[0.9.0] - 2023-12-15</h3>
-                                <h4>Fixed</h4>
-                                <ul>
-                                    <li>Fixed a critical security vulnerability related to user authentication.</li>
-                                    <li>Resolved issues causing intermittent downtime during high traffic periods.</li>
-                                    <li>Fixed broken image links on certain pages.</li>
-                                </ul>
-                                <p class="container2-P3">Contributors for this release: <a href="https://twitter.com/MahaAlzouba">@MahaAlzouba</a>, <a href="https://twitter.com/NoorJafaar">@NoorJafaar</a>.</p>
-                            </div>
-                        </div>
-            
-                        <!-- Change Log Entry 5 -->
-                        <div class="card mb-3" style="max-width: 540px;">
-                            <div class="card-body">
-                                <h3>[0.8.1] - 2023-11-28</h3>
-                                <h4>Changed</h4>
-                                <ul>
-                                    <li>Improved error handling for a more user-friendly experience.</li>
-                                    <li>Updated third-party libraries to the latest versions for security patches.</li>
-                                    <li>Changed the contact form layout for better usability.</li>
-                                </ul>
-                                <h4>Fixed</h4>
-                                <ul>
-                                    <li>Fixed broken links in the documentation section.</li>
-                                    <li>Addressed cross-browser compatibility issues with Internet Explorer.</li>
-                                    <li>Fixed alignment problems on the mobile version of the site.</li>
-                                </ul>
-                                <p class="container2-P3">Contributors for this release: <a href="https://twitter.com/gmx.32">@gmx.32</a>, <a href="https://twitter.com/sudomaze">@NoorJafaar</a>, <a href="https://twitter.com/unifoliatus">@FatemaSalman</a>.</p>
-                            </div>
-                        </div>
-            
-                        <!-- Add more change log entries as needed -->
-                
+
+                   <span style="font-weight: bold;">Copyright (c) 2024 Elite</span><br/>
+                   Permission is hereby granted, free of charge, to any person obtaining a copy
+                   of this software and associated documentation files (the "Software"), to deal
+                   in the Software without restriction, including without limitation the rights
+                   to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                   copies of the Software, and to permit persons to whom the Software is
+                   furnished to do so, subject to the following conditions:
+
+                <p class="container2-P3">
+                    The above copyright notice and this permission notice shall be included in all
+                    copies or substantial portions of the Software.               </p>
+
+                <p class="container2-P3">
+
+                    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+                 </p>
+
             </div>
             <!--right image-->
             <div class="imgRightBox">
-                <img src="img/container2.png" alt="" class="container2-img"> <br/> <br/> <br/>
-                <img src="img/container2.png" alt="" class="container2-img"> <br/> <br/> <br/>
-                <img src="img/container2.png" alt="" class="container2-img"> <br/> <br/> <br/>
+                <img src="img/container2.png" alt="" class="container2-img">
 
             </div>
-            
+
         </div>
         <!--end container2-->
 

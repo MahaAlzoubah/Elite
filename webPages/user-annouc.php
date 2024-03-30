@@ -243,52 +243,83 @@
 
 <body>
 
-    <nav>
-        <img id="logo" src="meta/logo.png" alt="logo" width="100px" height="100px">
-        <links>
-            <a href="homePage.php">Home</a>
-            <a class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-               About Us
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="whatelite.html">What is Elite?</a></li>
-              <li><a class="dropdown-item" href="priv.html">Privcy & Policy</a></li>
-              <li><a class="dropdown-item" href="lic.html">License</a></li>
-              <li><a class="dropdown-item" href="chang.html">Change Log</a></li>
-              <li><a class="dropdown-item" href="screen.html">Screenshots</a></li>
-              </ul>
-           </div>
-           <div class="dropdown">
-            <a class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-               Improvment
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="de-fet-req.html">Features & Requirements</a></li>
-              <li><a class="dropdown-item" href="de-code.html">Code of conduct</a></li>
-              <li><a class="dropdown-item" href="de-doc.html">Developer documentation</a></li>
-              <li><a class="dropdown-item" href="de-guid.html">Developer guidlines</a></li>
-              <li><a class="dropdown-item" href="https://discord.gg/3BpZhYgY">Message forum </a></li>
-              <li><a class="dropdown-item" href="user-feed.php">Feedback</a></li>
-              <li><a class="dropdown-item" href="https://github.com/MahaAlzoubah/Elite/issues">Issue reporting</a></li>
+  <nav>
+   <img id="logo" src="meta/logo.png" alt="logo" width="100px" height="100px">
+   <links>
+       <a href="homePage.php">Home</a>
+       <a class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          About Us
+       </a>
+       <ul class="dropdown-menu">
+         <li><a class="dropdown-item" href="whatelite.php">What is Elite?</a></li>
+         <li><a class="dropdown-item" href="priv.php">Privcy & Policy</a></li>
+         <li><a class="dropdown-item" href="lic.php">License</a></li>
+         <li><a class="dropdown-item" href="chang.php">Change Log</a></li>
+         <li><a class="dropdown-item" href="screen.php">Screenshots</a></li>
+         </ul>
+      </div>
+      <div class="dropdown">
+       <a class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Improvment
+       </a>
+       <ul class="dropdown-menu">
+         <li><a class="dropdown-item" href="de-fet-req.php">Features & Requirements</a></li>
+         <li><a class="dropdown-item" href="de-code.php">Code of conduct</a></li>
+         <li><a class="dropdown-item" href="de-doc.php">Developer documentation</a></li>
+         <li><a class="dropdown-item" href="de-guid.php">Developer guidlines</a></li>
+         <li><a class="dropdown-item" href="https://discord.gg/3BpZhYgY">Message forum </a></li>
+         <li><a class="dropdown-item" href="user-feed.php">Feedback</a></li>
+         <li><a class="dropdown-item" href="https://github.com/MahaAlzoubah/Elite">Github repository</a></li>
+         <li><a class="dropdown-item" href="https://github.com/MahaAlzoubah/Elite/issues">Issue reporting</a></li>
 
-              </ul>
-           </div>
+         </ul>
+      </div>
 
-           <div class="dropdown">
-            <a class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-               Discover
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="discover.html">Why Us?</a></li>
-              <li><a class="dropdown-item" href="user-annouc.html">Annoucment</a></li>
-              <li><a class="dropdown-item" href="user-feed.php">Feedback</a></li>
-              <li><a class="dropdown-item" href="https://github.com/MahaAlzoubah/Elite/issues">Issue reporting</a></li>
+      <div class="dropdown">
+       <a class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Discover
+       </a>
+       <ul class="dropdown-menu">
+         <li><a class="dropdown-item" href="discover.php">Why Us?</a></li>
+         <li><a class="dropdown-item" href="user-annouc.php">Annoucment</a></li>
+         <li><a class="dropdown-item" href="user-feed.php">Feedback</a></li>
+         <li><a class="dropdown-item" href="https://github.com/MahaAlzoubah/Elite/issues">Issue reporting</a></li>
 
-              </ul>
-           </div>
+         </ul>
+      </div>
 
-        </links>
-    </nav>
+      <button style=" margin-left: 30px; color:white; background-color: transparent; border:none" onclick="window.location.href='download.php?file=Elite.zip';">Download</button>
+
+
+    <?php
+    if (!empty($_GET['file']))
+    {
+    $filename=basename($_GET['file']);
+    $filepath= './'. $filename;
+    if(!empty($filename) && file_exists($filepath)){
+
+      //define headers
+      header("cache-control: public");
+      header("content-description: File Transfer");
+      header("Content-Disposition: attachment; filename=$filename");
+      header('Content-Type: application/octet-stream');
+      header('Content-Length: ' . filesize($filepath));
+      header("Content-Transfer-Encoding: binary");
+
+      ob_clean(); // Clean (erase) the output buffer
+      flush();    // Flush system output buffer
+      readfile($filepath);
+      exit;
+
+    }
+    else{
+      echo "This File Does not exist.";
+    }
+    }
+    ?>
+   </links>
+
+</nav>
 
     <main>
 
@@ -296,7 +327,7 @@
             <p class="container2-P1">Important Announcement !</p>
 
             <div class="container2">
-    
+
                 <!-- Announcement Card 1 -->
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row g-0">
@@ -314,16 +345,16 @@
                                     Discuss features 🚀
                                     Connect with the Elite community 💬
                                     Let's build Elite together! Dive in and start chatting.
-                                    
+
                                     Happy discussing! 🌍✨
-                                    
+
                                     The Elite Team</p>
                                 <a href="https://github.com/MahaAlzoubah/Elite/discussions/categories/announcements" class="btn btn-primary">Learn More</a>
                             </div>
                         </div>
                     </div>
                 </div>
-    
+
                 <!-- Announcement Card 2 -->
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row g-0">
@@ -340,13 +371,13 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <!-- Add more announcement cards as needed -->
-    
+
             </div>
         </section>
     </main>
-   
+
 
     <footer>
         <column>
