@@ -8,16 +8,16 @@
 Elite is a newly launched website for booking a luxurious hotel room, developed as *Free and Open-Source Software*. Our goal is to serve individuals who are looking for the ultimate in luxury travel experiences by offering a simple and easy-to-use booking platform. Our dedication is in our selection of exceptional hotels and resorts that provide guests with an unmatched degree of magnificence and luxury. Elite aims to be the preferred option for people looking for a classy and elegant stay, providing our wealthy guests with an easy and elegant reservation experience.
 
 # Table of Contents
-1. [The project is Free And Open-Source](#the-project-is-free-and-open-source)
-2. [Looking around Other Similar Projects](#Looking-around-Other-Similar-Projects)
-3. [Choosing a Good Name](#choosing-a-good-name)
-4. [Starting from What You Have](#Starting-from-What-You-Have)
-5. [Features and Requirements List](#features-and-requirements-list)
-6. [Development Status](#development-status)
-7. [Downloads](#Downloads)
-8. [Version Control and Bug Tracker Access](#Version-Control-and-Bug-Tracker-Access)
-9. [Communication Channels](#communication-channels)
-10. [Privacy & Policy](#Privacy-&-Policy)
+1.  [The project is Free And Open-Source](#the-project-is-free-and-open-source)
+2.  [Looking around Other Similar Projects](#Looking-around-Other-Similar-Projects)
+3.  [Choosing a Good Name](#choosing-a-good-name)
+4.  [Starting from What You Have](#Starting-from-What-You-Have)
+5.  [Features and Requirements List](#features-and-requirements-list)
+6.  [Development Status](#development-status)
+7.  [Downloads](#Downloads)
+8.  [Version Control and Bug Tracker Access](#Version-Control-and-Bug-Tracker-Access)
+9.  [Communication Channels](#communication-channels)
+10. [Privacy and Policy](#Privacy-and-Policy)
 11. [Developer Guidelines](#developer-guidelines)
 12. [Documentation](#documentation)
 13. [Frequently Asked Questions (FAQ)](#frequently-asked-questions-faq)
@@ -137,7 +137,7 @@ We've set up official channels for interaction with our Elite community to facil
 
 We encourage you to use these channels for submitting comments, questions, and any other inquiries related to Elite. Your feedback is valuable to us!
 
-# Privacy & Policy
+# Privacy and Policy
 Welcome to Elite, where we prioritize transparency and the protection of your privacy. While we've outlined the key points in this summary, please note that the comprehensive and legally-binding version of our privacy policy is available below. Residents of Bahrain can find specific details tailored to Bahrain legislation on our Bahrain Privacy Rights page.
 ## Purpose and Commitment:
 At Elite, our commitment revolves around the responsible use of technology to elevate user experiences while safeguarding privacy. We adhere strictly to collecting, utilizing, and disclosing personally identifiable information solely for legitimate purposes.
