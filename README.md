@@ -17,16 +17,17 @@ Elite is a newly launched website for booking a luxurious hotel room, developed 
 7. [Downloads](#Downloads)
 8. [Version Control and Bug Tracker Access](#Version-Control-and-Bug-Tracker-Access)
 9. [Communication Channels](#communication-channels)
-10. [Developer Guidelines](#developer-guidelines)
-11. [Documentation](#documentation)
-12. [Frequently Asked Questions (FAQ)](#frequently-asked-questions-faq)
-13. [Developer Documentation](#developer-documentation)
-14. [Codes of Conduct](#code-of-conduct)
-15. [Change Log](#Change-Log)
-16. [Screenshots](#Screenshots)
-17. [Hosting](#Hosting)
-18. [Announcing](#announcements)
-19. [License](#License)
+10. [Privacy & Policy](#Privacy-&-Policy)
+11. [Developer Guidelines](#developer-guidelines)
+12. [Documentation](#documentation)
+13. [Frequently Asked Questions (FAQ)](#frequently-asked-questions-faq)
+14. [Developer Documentation](#developer-documentation)
+15. [Codes of Conduct](#code-of-conduct)
+16. [Change Log](#Change-Log)
+17. [Screenshots](#Screenshots)
+18. [Hosting](#Hosting)
+19. [Announcing](#announcements)
+20. [License](#License)
 
 
 # The project is Free And Open-Source
@@ -135,6 +136,30 @@ We've set up official channels for interaction with our Elite community to facil
 - *Email:* You can contact us at elite.github@gmail.com with private questions. 
 
 We encourage you to use these channels for submitting comments, questions, and any other inquiries related to Elite. Your feedback is valuable to us!
+
+# Privacy & Policy
+Welcome to Elite, where we prioritize transparency and the protection of your privacy. While we've outlined the key points in this summary, please note that the comprehensive and legally-binding version of our privacy policy is available below. Residents of Bahrain can find specific details tailored to Bahrain legislation on our Bahrain Privacy Rights page.
+## Purpose and Commitment:
+At Elite, our commitment revolves around the responsible use of technology to elevate user experiences while safeguarding privacy. We adhere strictly to collecting, utilizing, and disclosing personally identifiable information solely for legitimate purposes.
+Non-Selling Policy:
+Elite upholds a firm stance against selling any personally identifiable information to third parties, in accordance with widely accepted definitions of the term.
+
+## Definition of Personally Identifiable Information:
+In the context of this policy, "personally identifiable information" encompasses any data that can identify or reasonably be linked to a named human subject.
+
+## Data Collection Methods:
+Elite employs three primary methods to gather relevant information about you, ensuring a transparent and secure approach to data collection.
+
+## Disclaimer:
+Before delving into the highlights, it's essential to acknowledge that these summaries are provided for clarity and understanding. For the comprehensive and legally-binding version of our privacy statement, please refer to the complete document accessible through the link below.
+
+## Bahrain Privacy Rights:
+Residents of Bahrain can delve into specific details aligned with Bahrain legislation on our dedicated Bahrain Privacy Rights page. Legal definitions are provided for your reference.
+
+## Contact Us:
+For any questions, concerns, or the need for further clarification, feel free to reach out to our privacy team at  <a href="mailto:privacy@elite.com">privacy@elite.com</a>.
+
+Thank you for choosing Elite, where your privacy matters.
 
 # Developer Guidelines
 
@@ -455,7 +480,7 @@ We had our own virtual private server (VPS) hosted on the cloud (Digital Ocean) 
 
 # Announcements
 
-Exciting news, Elite Announcing! Advertising is now available! Stay updated [here](https://github.com/MahaAlzoubah/Ellite/discussions/categories/announcements). Let's make Elite better!
+Exciting news, Elite Announcing! Advertising is now available! Stay updated [here]<a href="http://elite333.us.to">Elite</a> and [here](https://github.com/MahaAlzoubah/Ellite/discussions/categories/announcements). Let's make Elite better!
 
 The Elite Team
 
