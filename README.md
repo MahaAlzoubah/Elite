@@ -7,6 +7,19 @@
 # Mission Statement
 Elite is a newly launched website for booking a luxurious hotel room, developed as *Free and Open-Source Software*. Our goal is to serve individuals who are looking for the ultimate in luxury travel experiences by offering a simple and easy-to-use booking platform. Our dedication is in our selection of exceptional hotels and resorts that provide guests with an unmatched degree of magnificence and luxury. Elite aims to be the preferred option for people looking for a classy and elegant stay, providing our wealthy guests with an easy and elegant reservation experience.
 
+# What is Elite?
+Elite stands as a groundbreaking platform, introducing a novel approach to reserving luxurious rooms through Free and Open-Source Software. Our primary goal is to cater to individuals seeking seamless and user-friendly room booking experiences. At the core of our mission is a commitment to providing an exceptional selection of premium accommodations, ensuring users encounter a level of sophistication and comfort that surpasses expectations.
+
+Elite aspires to become the preferred choice for those seeking a refined and elegant room reservation platform. We aim to offer a seamless and sophisticated booking experience, specifically tailored for our discerning users. Our dedication to providing top-tier reservations is mirrored in our pursuit of creating a platform that seamlessly aligns with the principles of freedom and transparency.
+
+Just like Free Software principles, Elite emphasizes the user's right to access, modify, and enhance the software we provide. While our platform offers a premium reservation service, we believe in the importance of freedom over cost. We advocate for the liberty of choice, ensuring that everyone, regardless of their room preferences, has the autonomy to shape their experiences.
+
+Elite invites you to join our community, one that values personal choice and transparency. Your contributions can play a pivotal role in enhancing our platform, ensuring broader compatibility, increased utility, and no user lock-in. We firmly believe that Free and Open-Source Software can deliver superior quality, heightened reliability, enhanced security, and unparalleled flexibility compared to proprietary alternatives.
+
+The Elite community is the life force of our project, fostering collaborative development that consistently exceeds expectations. With various roles available, we extend an invitation to individuals from diverse backgrounds to contribute and shape the future of sophisticated room reservation experiences.
+
+Our principles, as outlined in the statutes of Elite, guide our collaborative efforts and encourage new members to contribute in a way that benefits the entire community. Through the use of copyleft licenses such as the MIT.
+
 # Table of Contents
 1. [The project is Free And Open-Source](#the-project-is-free-and-open-source)
 2. [Looking around Other Similar Projects](#Looking-around-Other-Similar-Projects)
