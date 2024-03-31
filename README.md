@@ -340,7 +340,7 @@ Found below are screenshots of the demo website that is hosted:
 
 ## Sign In Page
 <p align="center">
-  <img src="meta/img/1.png" alt="Elite Sign In Page">
+  <img src="webPages/meta/img/1.png" alt="Elite Sign In Page">
 </p>
 
 ## Sign Up Page
