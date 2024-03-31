@@ -22,10 +22,11 @@ Elite is a newly launched website for booking a luxurious hotel room, developed 
 12. [Frequently Asked Questions (FAQ)](#frequently-asked-questions-faq)
 13. [Developer Documentation](#developer-documentation)
 14. [Codes of Conduct](#code-of-conduct)
-15. [Screenshots](#Screenshots)
-16. [Hosting](#Hosting)
-17. [Announcing](#announcements)
-18. [License](#License)
+15. [Change Log](#Change-Log)
+16. [Screenshots](#Screenshots)
+17. [Hosting](#Hosting)
+18. [Announcing](#announcements)
+19. [License](#License)
 
 
 # The project is Free And Open-Source
@@ -335,6 +336,35 @@ Reporting abusive, harassing, or otherwise inappropriate behavior can be done by
 This Code of Conduct is adapted from the [Contributor Covenant](https://www.contributor-covenant.org), version 2.0, available at [https://www.contributor-covenant.org/version/2/0/code_of_conduct.html](https://www.contributor-covenant.org/version/2/0/code_of_conduct.html).
 
 
+# Change Log
+All significant changes to the Elite project will be documented in this file. The format adheres to the principles of Keep a Changelog, and the project follows Semantic Versioning.
+##[1.0.0] - 2024-02-01
+###Added
+- Added a blog section for sharing community insights and updates.
+- Introduced a new user dashboard with personalized settings.
+- Integrated social media sharing options for articles and pages.
+###Changed
+- Reorganized the project's folder structure for better code organization.
+- Upgraded the server infrastructure to improve website performance.
+- Changed the default color scheme to a more modern and vibrant palette.
+Contributors for this release: <a href="http://twitter/MahaAlzouba">@MahaAlzouba</a>, <a href="http://twitter/NoorJafaar">@NoorJafaar</a>, <a href="http://twitter/FatemaSalman">@FatemaSalman</a>.
+##[0.9.0] - 2023-12-15
+###Fixed
+- Fixed a critical security vulnerability related to user authentication.
+- Resolved issues causing intermittent downtime during high traffic periods.
+- Fixed broken image links on certain pages.
+Contributors for this release: <a href="http://twitter/MahaAlzouba">@MahaAlzouba</a>, <a href="http://twitter/NoorJafaar">@NoorJafaar</a>.
+##[0.8.1] - 2023-11-28
+###Changed
+- Improved error handling for a more user-friendly experience.
+- Updated third-party libraries to the latest versions for security patches.
+- Changed the contact form layout for better usability.
+###Fixed
+- Fixed broken links in the documentation section.
+- Addressed cross-browser compatibility issues with Internet Explorer.
+- Fixed alignment problems on the mobile version of the site.
+Contributors for this release: <a href="http://twitter/MahaAlzouba">@MahaAlzouba</a>, <a href="http://twitter/NoorJafaar">@NoorJafaar</a>, <a href="http://twitter/FatemaSalman">@FatemaSalman</a>.
+
 # Screenshots
 Found below are screenshots of the demo website that is hosted:
 
@@ -345,72 +375,72 @@ Found below are screenshots of the demo website that is hosted:
 
 ## Sign Up Page
 <p align="center">
-  <img src="meta/img/2.png" alt="Elite Sign Up Page">
+  <img src="webPages/meta/img/2.png" alt="Elite Sign Up Page">
 </p>
 
 ## Main Page
 <p align="center">
-  <img src="meta/img/3.png" alt="Elite Main Page">
+  <img src="webPages/meta/img/3.png" alt="Elite Main Page">
 </p>
 
 ## Contributer Rate 
 <p align="center">
-  <img src="meta/img/4.png" alt="Elite Contributer Rate ">
+  <img src="webPages/meta/img/4.png" alt="Elite Contributer Rate ">
 </p>
 
 ## Rooms
 <p align="center">
-  <img src="meta/img/5.png" alt="Elite Rooms">
+  <img src="webPages/meta/img/5.png" alt="Elite Rooms">
 </p>
 
 ## Discover Page
 <p align="center">
-  <img src="meta/img/6.png" alt="Elite Discover Page">
+  <img src="webPages/meta/img/6.png" alt="Elite Discover Page">
 </p>
 
 ## Information 
 <p align="center">
-  <img src="meta/img/7.png" alt="Elite Information">
+  <img src="webPages/meta/img/7.png" alt="Elite Information">
 </p>
 
 ## Profile Page
 <p align="center">
-  <img src="meta/img/8.png" alt="Elite Profile Page">
+  <img src="webPages/meta/img/8.png" alt="Elite Profile Page">
 </p>
 
 ## Room Details Page
 <p align="center">
-  <img src="meta/img/9.png" alt="Elite Room Details Page">
+  <img src="webPages/meta/img/9.png" alt="Elite Room Details Page">
 </p>
 
 ## Comment Page
 <p align="center">
-  <img src="meta/img/10.png" alt="Elite Comment Page">
+  <img src="webPages/meta/img/10.png" alt="Elite Comment Page">
 </p>
 
 ## Change Password Page
 <p align="center">
-  <img src="meta/img/11.png" alt="Elite Change Password Page">
+  <img src="webPages/meta/img/11.png" alt="Elite Change Password Page">
 </p>
 
 ## Reservation Details Page
 <p align="center">
-  <img src="meta/img/12.png" alt="Elite Reservation Details Page">
+  <img src="webPages/meta/img/12.png" alt="Elite Reservation Details Page">
 </p>
 
 ## History Page
 <p align="center">
-  <img src="meta/img/13.png" alt="Elite History Page">
+  <img src="webPages/meta/img/13.png" alt="Elite History Page">
 </p>
 
 ## Add Room Page
 <p align="center">
-  <img src="meta/img/14.png" alt="Elite Add Room Page">
+  <img src="webPages/meta/img/14.png" alt="Elite Add Room Page">
 </p>
 
 ## User Info Page
 <p align="center">
-  <img src="meta/img/15.png" alt="Elite User Info Page">
+  <img src="webPages/meta/img/15.png" alt="Elite User Info Page">
 </p>
 
 
