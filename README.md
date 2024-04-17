@@ -393,25 +393,26 @@ Contributors for this release: <a href="http://twitter/MahaAlzouba">@MahaAlzouba
 # Screenshots
 Found below are screenshots of the demo website that is hosted:
 
-## Sign In Page
-<p align="center">
-  <img src="webPages/meta/img/1.png" alt="Elite Sign In Page">
-</p>
-
 ## Sign Up Page
 <p align="center">
-  <img src="webPages/meta/img/2.png" alt="Elite Sign Up Page">
+  <img src="webPages/meta/img/1.png" alt="Elite Sign Up Page">
 </p>
 
-## Main Page
+## Sign In Page
 <p align="center">
-  <img src="webPages/meta/img/3.png" alt="Elite Main Page">
+  <img src="webPages/meta/img/2.png" alt="Elite Sign In Page">
 </p>
 
-## Contributer Rate 
+## Main Page 
 <p align="center">
-  <img src="webPages/meta/img/4.png" alt="Elite Contributer Rate ">
+  <img src="webPages/meta/img/4.png" alt="Elite Main Page ">
 </p>
+
+## Contributer Rate
+<p align="center">
+  <img src="webPages/meta/img/3.png" alt="Elite Contributer Rate">
+</p>
+
 
 ## Rooms
 <p align="center">
@@ -428,39 +429,39 @@ Found below are screenshots of the demo website that is hosted:
   <img src="webPages/meta/img/7.png" alt="Elite Information">
 </p>
 
-## Profile Page
-<p align="center">
-  <img src="webPages/meta/img/8.png" alt="Elite Profile Page">
-</p>
-
 ## Room Details Page
 <p align="center">
-  <img src="webPages/meta/img/9.png" alt="Elite Room Details Page">
+  <img src="webPages/meta/img/8.png" alt="Elite Room Details Page">
 </p>
 
-## Comment Page
+## Profile Page
 <p align="center">
-  <img src="webPages/meta/img/10.png" alt="Elite Comment Page">
+  <img src="webPages/meta/img/9.png" alt="Elite Profile Page">
 </p>
 
 ## Change Password Page
 <p align="center">
-  <img src="webPages/meta/img/11.png" alt="Elite Change Password Page">
+  <img src="webPages/meta/img/10.png" alt="Elite Change Password Page">
 </p>
 
-## Reservation Details Page
+## Comment Page
 <p align="center">
-  <img src="webPages/meta/img/12.png" alt="Elite Reservation Details Page">
+  <img src="webPages/meta/img/11.png" alt="Elite Comment Page">
 </p>
 
 ## History Page
 <p align="center">
-  <img src="webPages/meta/img/13.png" alt="Elite History Page">
+  <img src="webPages/meta/img/12.png" alt="Elite History Page">
 </p>
 
 ## Add Room Page
 <p align="center">
-  <img src="webPages/meta/img/14.png" alt="Elite Add Room Page">
+  <img src="webPages/meta/img/13.png" alt="Elite Add Room Page">
+</p>
+
+## Reservation Details Page
+<p align="center">
+  <img src="webPages/meta/img/14.png" alt="Elite Reservation Details Page">
 </p>
 
 ## User Info Page
