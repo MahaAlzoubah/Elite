@@ -481,7 +481,7 @@ We had our own virtual private server (VPS) hosted on the cloud (Digital Ocean) 
 
 # Announcements
 
-Exciting news, Elite Announcing! Advertising is now available! Stay updated [here]<a href="http://elite333.us.to">Elite</a> and [here](https://github.com/MahaAlzoubah/Ellite/discussions/categories/announcements). Let's make Elite better!
+Exciting news, Elite Announcing! Advertising is now available! Stay updated<a href="http://elite333.us.to"> [here]</a> and [here](https://github.com/MahaAlzoubah/Ellite/discussions/categories/announcements). Let's make Elite better!
 
 The Elite Team
 
