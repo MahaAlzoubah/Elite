@@ -9,7 +9,7 @@
 </head>
 <style>
     html {
-        height: 100% !important;
+        height: 50% !important;
     }
 
     * {
